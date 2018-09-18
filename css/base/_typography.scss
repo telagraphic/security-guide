@@ -1,0 +1,23 @@
+@mixin modular-scale($s-font, $l-font, $height-scale, $min-viewport, $max-viewport) {
+  font-size: calc(#{$s-font}px + (#{$l-font} - #{$s-font}) * ((100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport})));
+  line-height: calc( #{$s-font * $height-scale}px + (#{$l-font * $height-scale} - #{$s-font * $height-scale}) * ((100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport})));
+  margin: 0;
+  padding: 0;
+}
+
+
+h1, .h1 {
+  @include modular-scale(36, 72, 1.3, 320, 2000);
+}
+
+h2, .h2 {
+  @include modular-scale(33, 61, 1.3, 320, 2000);
+}
+
+h3, .h3 {
+  @include modular-scale(20, 46, 1.3, 320, 2000);
+}
+
+h4, .h4 {
+  @include modular-scale(28, 42, 1.3, 320, 2000);
+}

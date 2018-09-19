@@ -4,13 +4,24 @@ body {
 
 main {
   display: grid;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-rows: auto;
+  grid-template-areas: "nav content";
 
 }
 
 nav.main-nav {
+  grid-area: nav;
+
+  height: 100vh;
+  overflow-y: scroll;
+
 
 }
 
 section.barba-container {
+  grid-area: content;
 
+  height: 100vh;
+  overflow-y: scroll;
 }

@@ -4,13 +4,15 @@ body {
 
 main {
   display: grid;
-
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-areas: "nav content";
 }
 
 nav.main-nav {
-
+  grid-area: nav;
 }
 
 section.barba-container {
-
+  grid-area: content;
 }

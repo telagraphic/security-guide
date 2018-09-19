@@ -1,0 +1,22 @@
+a {
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  // padding: 0 .25rem;
+
+
+  transition-property: color, background-color;
+  transition-duration: .15s;
+  transition-timing-function: ease-in;
+
+  &:focus,
+  &:hover {
+    color: white;
+    background-color: black;
+    text-decoration: none;
+  }
+
+  &:active {
+    
+  }
+}

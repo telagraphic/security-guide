@@ -1,0 +1,44 @@
+// <article class="chapter-contents">
+//   <section class="chapter-section">
+//     <div class="section-content">
+//
+//     <section class="chapter-section">
+//       <h3>Alternatives</h3>
+//       <div class="section-content">
+
+
+.chapter {
+
+
+  a {
+    color: var(--body-copy);
+
+    &:focus,
+    &:hover {
+
+    }
+
+
+    &:active {
+      
+    }
+  }
+
+}
+
+
+.chapter-section {
+
+
+  h3 {
+    color: var(--sub-header);
+  }
+}
+
+
+.section-content {
+  color: var(--body-copy);
+
+
+
+}

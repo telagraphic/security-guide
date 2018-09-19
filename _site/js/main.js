@@ -85,7 +85,7 @@ $('document').ready(function() {
     return FadeTransition;
   };
 
-
+  Barba.Prefetch.init(); //use only with a short list of links....
   Barba.Pjax.start();
 
 

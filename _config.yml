@@ -3,7 +3,7 @@ description:
 author:
 
 baseurl: "/"
-permalink: pretty
+# permalink: pretty
 
 
 markdown: kramdown

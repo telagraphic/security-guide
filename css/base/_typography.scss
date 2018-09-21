@@ -10,8 +10,6 @@ body {
   font-family: 'Vision';
 }
 
-
-
 h1, .h1 {
   @include modular-scale(36, 72, 1.3, 320, 2000);
   color: var(--header);

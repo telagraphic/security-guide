@@ -1,0 +1,11 @@
+.chapter a {
+  color: var(--body-copy);
+}
+
+.chapter-section h3 {
+  color: var(--sub-header);
+}
+
+.section-content {
+  color: var(--body-copy);
+}

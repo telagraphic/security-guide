@@ -3,7 +3,7 @@ description:
 author:
 
 baseurl: "/"
-# permalink: pretty
+permalink: pretty
 
 
 markdown: kramdown
@@ -17,6 +17,6 @@ sass:
   style: compressed
 
 plugin:
-  - octopress-minify-html
+  # - octopress-minify-html
 
 exclude: []

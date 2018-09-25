@@ -21,7 +21,6 @@
 
     }
 
-
     &:active {
 
     }
@@ -37,7 +36,13 @@
 
   min-height: 100%;
 
-  padding: 1rem;
+  @media (min-width: 42em) {
+
+  }
+
+  h1 {
+    padding: 1rem;
+  }
 
 
 }
@@ -49,6 +54,8 @@
 .chapter-section {
   grid-area: content;
 
+  padding: 1rem;
+
   h3 {
     color: var(--sub-header);
   }
@@ -57,8 +64,6 @@
 
 .section-content {
   color: var(--body-copy);
-
-
 }
 
 .page-footer {

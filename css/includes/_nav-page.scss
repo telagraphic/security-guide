@@ -1,15 +1,28 @@
 .page-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+
+  background-color: black;
+  color: white;
+  padding: .5rem;
+
+
+  @media (min-width: 42em) {
+    padding: 0;
+    justify-content: space-between;
+
+    background-color: white;
+    color: black;
+  }
 
   .prev {
-
+    padding: 0 1rem;
 
   }
 
 
   .next {
-
+    padding: 0 1rem;
 
   }
 

@@ -1,9 +1,11 @@
 .main-nav {
-
-  // with just <a>
   display: flex;
   flex-direction: column;
   background-color: black;
+
+  @media (min-width: 42em) {
+
+  }
 
 
   a {

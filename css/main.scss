@@ -9,10 +9,12 @@
 
 @import "components/links";
 @import "components/lists";
+@import "components/lists";
 
 @import "pages/grid";
 @import "pages/home";
 @import "pages/guide";
 
 
-@import "includes/guide-nav";
+@import "includes/main-nav";
+@import "includes/nav-page";

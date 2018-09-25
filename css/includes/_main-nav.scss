@@ -1,0 +1,40 @@
+.main-nav {
+
+  // with just <a>
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+
+
+  a {
+
+    padding: 0 1rem;
+
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+
+    transition: background-color .2s ease-in;
+
+    transition-property: color, background-color;
+    transition-duration: .15s;
+    transition-timing-function: ease-in;
+
+
+    &:focus,
+    &:hover {
+      color: black;
+      background-color: #636363;
+      text-decoration: none;
+    }
+
+    &:active {
+
+    }
+
+    &.active {
+      color: black;
+      background-color: white;
+    }
+  }
+}

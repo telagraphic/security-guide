@@ -1,5 +1,27 @@
+.chapter {
+  height: 100%;
+  width: 100%;
+}
+
 .chapter a {
   color: var(--body-copy);
+}
+
+.chapter-contents {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "nav" "content" "footer";
+  min-height: 100%;
+  padding: 1rem;
+}
+
+.page-nav {
+  grid-area: nav;
+}
+
+.chapter-section {
+  grid-area: content;
 }
 
 .chapter-section h3 {
@@ -8,4 +30,8 @@
 
 .section-content {
   color: var(--body-copy);
+}
+
+.page-footer {
+  grid-area: footer;
 }

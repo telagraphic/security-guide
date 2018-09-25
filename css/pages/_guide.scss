@@ -9,6 +9,9 @@
 
 .chapter {
 
+  height: 100%;
+  width: 100%;
+
 
   a {
     color: var(--body-copy);
@@ -26,9 +29,25 @@
 
 }
 
+.chapter-contents {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "nav" "content" "footer";
+
+  min-height: 100%;
+
+  padding: 1rem;
+
+
+}
+
+.page-nav {
+  grid-area: nav;
+}
 
 .chapter-section {
-
+  grid-area: content;
 
   h3 {
     color: var(--sub-header);
@@ -40,5 +59,8 @@
   color: var(--body-copy);
 
 
+}
 
+.page-footer {
+  grid-area: footer;
 }

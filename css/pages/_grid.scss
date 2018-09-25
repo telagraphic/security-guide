@@ -11,8 +11,13 @@ main {
 
 nav.main-nav {
   grid-area: nav;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 section.barba-container {
   grid-area: content;
+
+  height: 100vh;
+  overflow-y: scroll;
 }

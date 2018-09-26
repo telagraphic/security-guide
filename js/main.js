@@ -85,14 +85,14 @@ $('document').ready(function() {
     return FadeTransition;
   };
 
-  Barba.Prefetch.init(); //use only with a short list of links....
-  Barba.Pjax.start();
+  // Barba.Prefetch.init(); //use only with a short list of links....
+  // Barba.Pjax.start();
 
 
 });
 
 
-var links = document.querySelectorAll('.main-nav a');
+var links = document.querySelectorAll('.main-menu a');
 
 links.forEach(function(link) {
   link.addEventListener('click', function(event) {
@@ -106,3 +106,30 @@ function removeActive(links) {
     link.classList.remove('active');
   });
 }
+
+var mobile_menu_button = document.querySelector('.mobile-menu-button');
+var mobile_menu = document.querySelector('.mobile-menu');
+var close_mobile_menu_button = document.querySelector('.close-mobile-menu-button');
+
+if (mobile_menu_button) {
+  mobile_menu_button.addEventListener("click", toggleMobileMenu);
+}
+
+if (close_mobile_menu_button) {
+  close_mobile_menu_button.addEventListener("click", toggleMobileMenu);
+}
+
+function toggleMobileMenu() {
+  mobile_menu.classList.toggle("toggle-mobile-menu");
+}
+
+function hideMobileMenuWhenClicked() {
+  var mobileLinks = document.querySelectorAll('.mobile-menu a');
+  mobileLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+      mobile_menu.classList.remove("toggle-mobile-menu");
+    });
+  });
+}
+
+hideMobileMenuWhenClicked();

@@ -1,15 +1,14 @@
-.main-nav {
-  display: flex;
-  flex-direction: column;
-  background-color: black;
+.main-menu {
+  display: none;
 
   @media (min-width: 42em) {
-
+    display: flex;
+    flex-direction: column;
+    background-color: black;
   }
 
 
   a {
-
     padding: 0 1rem;
 
     color: white;
@@ -41,7 +40,7 @@
   }
 }
 
-.mobile-nav {
+.mobile-menu {
   position: fixed;
 
   display: flex;
@@ -51,16 +50,36 @@
   height: 100%;
   width: 100%;
 
-  padding: 0 2rem;
+  padding: 1rem 2rem;
 
   background-color: black;
   color: white;
 
   z-index: 10;
   overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+
+  transition-property: visibility, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
 
   @media (min-width: 42em) {
     display: none;
   }
 
+  .close-mobile-menu-button {
+    color: white;
+    background-color: black;
+  }
+
+  a {
+    padding: .3rem 0;
+  }
+
+}
+
+.toggle-mobile-menu {
+  visibility: visible;
+  opacity: 1;
 }

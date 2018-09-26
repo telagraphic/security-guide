@@ -40,3 +40,27 @@
     }
   }
 }
+
+.mobile-nav {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 0 2rem;
+
+  background-color: black;
+  color: white;
+
+  z-index: 10;
+  overflow-y: scroll;
+
+  @media (min-width: 42em) {
+    display: none;
+  }
+
+}

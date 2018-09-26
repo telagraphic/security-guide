@@ -4,8 +4,8 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: auto;
-  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  grid-template-columns: 100vw;
   grid-template-areas: "content";
 
   @media (min-width: 42em) {

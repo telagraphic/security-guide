@@ -36,6 +36,7 @@
 
     height: 100%;
     width: 100%;
+    
 
     padding: 1rem 2rem;
   }
@@ -51,7 +52,7 @@
     height: 50%;
 
     section {
-      display: block;
+      display: none;
       opacity: 0;
       visibility: hidden;
 

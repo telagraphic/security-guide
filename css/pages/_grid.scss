@@ -8,10 +8,10 @@ main {
   grid-template-columns: 100vw;
   grid-template-areas: "content";
 
-  @media (min-width: 42em) {
-    grid-template-columns: 1fr 2.5fr;
-    grid-template-areas: "nav content";
-  }
+  // @media (min-width: 42em) {
+  //   grid-template-columns: 1fr 2.5fr;
+  //   grid-template-areas: "nav content";
+  // }
 }
 
 nav.main-menu {
@@ -19,7 +19,7 @@ nav.main-menu {
 
   @media (min-width: 42em) {
     display: flex;
-    grid-area: nav;
+    // grid-area: nav;
     height: 100vh;
     overflow-y: scroll;
   }

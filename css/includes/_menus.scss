@@ -1,0 +1,150 @@
+.main-menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  background-color: black;
+  color: white;
+
+  z-index: 10;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+
+  transition-property: visibility, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+
+  .menu-columns {
+    display: grid;
+    grid-template-columns: 40vw 60vw;
+    grid-template-rows: 100%;
+    grid-template-areas: "menu preview";
+
+
+    height: 100%;
+    width: 100%;
+
+    padding: 1rem 2rem;
+  }
+
+  .links {
+    display: flex;
+    grid-area: menu;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 1rem 2rem;
+  }
+
+  .link-preview {
+    grid-area: preview;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    width: 89%;
+    height: 50%;
+
+    section {
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+
+      transition-property: opacity, visibility;
+      transition-duration: .1s;
+      transition-timing-function: ease-in;
+
+      &.show-preview {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+
+  a {
+    padding: 0 1rem;
+
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+
+    transition: background-color .2s ease-in;
+
+    transition-property: color, background-color;
+    transition-duration: .15s;
+    transition-timing-function: ease-in;
+
+
+    &:focus,
+    &:hover {
+      color: black;
+      background-color: #636363;
+      text-decoration: none;
+    }
+
+    &:active {
+
+    }
+
+    &.active {
+      color: black;
+      background-color: white;
+    }
+  }
+}
+
+.toggle-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-menu {
+  position: fixed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  width: 100%;
+
+  padding: 1rem 2rem;
+
+  background-color: black;
+  color: white;
+
+  z-index: 10;
+  overflow-y: scroll;
+  visibility: hidden;
+  opacity: 0;
+
+  transition-property: visibility, opacity;
+  transition-duration: .2s;
+  transition-timing-function: ease-in;
+
+  @media (min-width: 42em) {
+    // display: none;
+  }
+
+  .close-mobile-menu-button {
+    color: white;
+    background-color: black;
+  }
+
+  a {
+    padding: .3rem 0;
+  }
+
+}
+
+.toggle-mobile-menu {
+  visibility: visible;
+  opacity: 1;
+}

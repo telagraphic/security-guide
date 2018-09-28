@@ -1,7 +1,6 @@
 //  get main-menu and intercept clicks
-
-
 var main_menu = document.querySelector(".main-menu");
+var page_container = document.querySelector(".page-container");
 function setupChapterLinks() {
   main_menu.addEventListener("click", function(event) {
     if (event.target && event.target.matches("a.chapter-link")) {
@@ -9,20 +8,20 @@ function setupChapterLinks() {
     }
 
     var linkURL = event.target.getAttribute("href");
+
+    // hide current page
+    console.log(page_container);
+    page_container.classList.add('animating');
+    console.log(page_container);
+
     changeChapterPage(linkURL, false);
+    // setTimeout(function() {
+    //
+    // }, 500)
+
   });
 }
 
-
-// popstate is triggered when forward or back button is clicked
-window.addEventListener("popstate", function(event) {
-  console.log("popstate triggered");
-
-  // get the directory/page path to jump to
-  var path = location.pathname.split('/').pop();
-  console.log(path);
-  changeChapterPage(path, true);
-});
 
 
 //  get external data from the link url
@@ -56,15 +55,42 @@ function changeChapterPage(url, browserButton) {
 // load that data into our container
 
 function loadNewPage(contents, url, browserButton) {
+
   var page_container = document.querySelector(".page-container");
-  page_container.innerHTML = contents;
+
+
+  // use css styles animation time for this duration
+  setTimeout(function() {
+    page_container.innerHTML = contents;
+  }, 200)
+
 
   if (!browserButton) window.history.pushState(null, '', url);
+
+  // show new page
+  console.log(page_container);
+  setTimeout(function() {
+    page_container.classList.remove('animating');
+    console.log(page_container);
+  }, 500)
+
+  console.log(page_container);
+
 }
 
 function updateHistoryState() {
 
 }
 
+
+// popstate is triggered when forward or back button is clicked
+window.addEventListener("popstate", function(event) {
+  console.log("popstate triggered");
+
+  // get the directory/page path to jump to
+  var path = location.pathname.split('/').pop();
+  console.log(path);
+  changeChapterPage(path, true);
+});
 
 setupChapterLinks();

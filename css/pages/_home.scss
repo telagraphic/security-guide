@@ -1,3 +1,18 @@
 .page-container {
-  // text-align: center;
+
+
+  &.animating {
+
+    .chapter-contents {
+      opacity: 0;
+    }
+
+  }
+
+  .chapter-contents {
+    opacity: 1;
+    transition: opacity .2s ease-in;
+  }
+
+
 }

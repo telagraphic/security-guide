@@ -8,9 +8,6 @@ console.log("location.port:" + location.port);
 console.log("location.protocol:" + location.protocol);
 console.log("location.search:" + location.search);
 
-// need code for a straight url paste, need to load complete page then cut out container if pjax or
-// use whole page if linked to!
-
 //  get main-menu and intercept clicks
 var main_menu = document.querySelector(".main-menu");
 var page_container = document.querySelector(".page-container");
@@ -22,18 +19,25 @@ function setupChapterLinks() {
 
     var linkURL = event.target.getAttribute("href");
 
-    // hide current page
-    page_container.classList.add('animating');
-
-    changeChapterPage(linkURL, false);
-    // setTimeout(function() {
-    //
-    // }, 500)
-
+    // check if same page
+    if (preventDoubleClick(linkURL)) {
+      // hide current page
+      page_container.classList.add('animating');
+      changeChapterPage(linkURL, false);
+    };
   });
 }
 
+function preventDoubleClick(url) {
+  var newURL = url.split('/').pop();
+  var path = location.pathname.split('/').pop();
 
+  if (newURL === path) {
+    return false;
+  }
+
+  return true;
+}
 
 //  get external data from the link url
 function changeChapterPage(url, browserButton) {
@@ -42,23 +46,23 @@ function changeChapterPage(url, browserButton) {
   request.open('GET', url, true);
 
   request.onload = function() {
-    if (request.status >= 200 && request.status < 400) {
-      // Success!
-      var data = request.responseText;
-      console.log("data: " + data);
-      var chapter = document.createElement("section");
-      chapter.setAttribute("class", "chapter-wrapper");
-      chapter.innerHTML = data;
-      console.log("chapter: " + chapter.querySelector(".page-container").innerHTML);
-      // var chapter = data.querySelector(".chapter-contents");
-      // console.log(chapter);
-      loadNewPage(chapter, url, browserButton);
-    } else {
-      // We reached our target server, but it returned an error
-      console.log("server error");
-
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        var chapter = document.createElement("section");
+        chapter.innerHTML = request.responseText;
+        loadNewPage(chapter, url, browserButton);
+      } else {
+        new Error("HTTP code is not 200");
+      }
     }
+
   };
+
+  request.timeout = 5000;
+
+  request.ontimeout = function() {
+    new Error("Request timed out");
+  }
 
   request.onerror = function() {
     // There was a connection error of some sort
@@ -71,6 +75,7 @@ function changeChapterPage(url, browserButton) {
 // load that data into our container
 
 function loadNewPage(contents, url, browserButton) {
+  document.title = contents.querySelector("title").innerHTML;
   var page_container = document.querySelector(".page-container");
 
   // use css styles animation time for this duration

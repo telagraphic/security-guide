@@ -12,7 +12,22 @@
   .chapter-contents {
     opacity: 1;
     transition: opacity .2s ease-in;
+
+    &.animating {
+
+      .chapter-section {
+        opacity: 0;
+      }
+
+    }
+
+    .chapter-section {
+      opacity: 1;
+      transition: opacity .2s ease-in;
+    }
   }
+
+
 
 
 }

@@ -17,7 +17,6 @@ var chapter_contents = document.querySelector(".chapter-contents");
 // container to intercept
 // link class to target
 // container to show/hide
-//
 
 function setupChapterLinks() {
   //main_menu
@@ -47,7 +46,6 @@ window.addEventListener("click", function(event) {
 });
 
 
-
 window.addEventListener("click", function(event) {
   if (event.target && event.target.matches("a.sub-page-link")) {
     event.preventDefault();
@@ -57,36 +55,6 @@ window.addEventListener("click", function(event) {
     }
   };
 });
-
-//
-// if (document.readyState !== 'loading') {
-//   console.log("content loaded");
-// }
-// console.log(chapter_links);
-// console.log(chapter_contents);
-//
-// var chapter_links = document.querySelector(".chapter-links");
-// var chapter_contents = document.querySelector(".chapter-contents");
-
-// function setupSectionLinks() {
-//
-//   chapter_links.addEventListener("click", function(event) {
-//     if (event.target && event.target.matches("a.sub-link")) {
-//       event.preventDefault();
-//     }
-//
-//     var linkURL = event.target.getAttribute("href");
-//     console.log(linkURL);
-//
-//     // check if same page
-//     if (preventDoubleClick(linkURL)) {
-//       // hide current page
-//       fetchSection(linkURL, false);
-//     };
-//   });
-// }
-//
-// setupSectionLinks();
 
 function preventDoubleClick(url) {
   var newURL = url.split('/').pop();

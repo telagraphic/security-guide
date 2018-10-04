@@ -39,14 +39,22 @@
 
 
     .section-content {
+      transform: translateX(0%);
+      // transform: translate3d(0, 0, 0);
 
-      opacity: 1;
+
     }
 
     &.animating {
 
       .section-content {
-        opacity: 0;
+        transform: translateX(-125%);
+        // transform: translate3d(-125%, 0, 0);
+        transition: transform .2s ease-in;
+        width: 100%;
+
+        z-index: 20;
+
       }
     }
   }

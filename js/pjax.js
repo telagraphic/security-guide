@@ -111,15 +111,15 @@ function loadPage(contents, url, browserButton) {
 }
 
 function loadSection(section, url, browserButton) {
-  document.title = section.querySelector('title').innerHTML;
   var chapterSection = document.querySelector('.chapter-section');
+  document.title = section.querySelector('title').innerHTML;
 
   updateNavigation(section);
 
   // add up css styles animation time for this duration
   setTimeout(function () {
     chapterSection.innerHTML = section.querySelector('.chapter-section').innerHTML;
-  }, 200);
+  }, 100);
 
   pushState(browserButton, url);
 
@@ -127,7 +127,7 @@ function loadSection(section, url, browserButton) {
   setTimeout(function () {
     scrollToTop(pageContainer);
     toggleContent(chapterSection, true);
-  }, 500);
+  }, 300);
 }
 
 function preventDoubleClick(url) {

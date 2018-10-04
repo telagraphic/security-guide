@@ -12,3 +12,60 @@ function removeActive(links) {
     link.classList.remove('active');
   });
 }
+
+// Main Menu
+
+var mainMenu = document.querySelector('.main-menu');
+var menuButton = document.querySelector('.menu-button');
+var closeMenuButton = document.querySelector('.close-menu-button');
+
+window.addEventListener('click', function (event) {
+
+  if (event.target) {
+    if (event.target.matches('button.menu-button')) {
+      console.log(menuButton);
+      mainMenu.classList.toggle('toggle-menu');
+    }
+
+    if (event.target.matches('button.close-menu-button')) {
+      console.log(closeMenuButton);
+      mainMenu.classList.remove('toggle-menu');
+    }
+
+    if (event.target.matches('a.chapter-link')) {
+      setTimeout(function () {
+        mainMenu.classList.remove('toggle-menu');
+      }, 500);
+    }
+  }
+});
+
+//  Uber menu
+var mainMenu = document.querySelector('.main-menu');
+var menuLinks = mainMenu.querySelectorAll('.links a');
+var previewLinks = document.querySelectorAll('.link-preview section');
+
+function initMenuLinks() {
+  menuLinks.forEach(function (link) {
+    link.addEventListener('mouseover', function (event) {
+      showLinkPreview(link.classList[0]);
+    });
+  });
+}
+
+function showLinkPreview(link) {
+  removeActivePreview();
+  previewLinks.forEach(function (preview) {
+    if (link === preview.classList[0]) {
+      preview.classList.toggle('show-preview');
+    }
+  });
+}
+
+function removeActivePreview() {
+  previewLinks.forEach(function (preview) {
+    preview.classList.remove('show-preview');
+  });
+}
+
+initMenuLinks();

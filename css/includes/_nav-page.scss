@@ -17,13 +17,20 @@
 
   .prev {
     padding: 0 1rem;
-
   }
-
 
   .next {
     padding: 0 1rem;
-
   }
+
+  .menu-button {
+
+    button {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  
 
 }

@@ -18,7 +18,6 @@ function linkInterceptor() {
       event.preventDefault();
       request.url = event.target.getAttribute('href');
       request.type = 'page';
-      console.log(request);
       if (preventDoubleClick(request.url)) {
         fetchPage(request);
       }
@@ -149,6 +148,9 @@ function updateNavigation(section) {
 
   var prevButtons = document.querySelectorAll('.prev a');
   var nextButtons = document.querySelectorAll('.next a');
+
+  var prevText = prevHref.split('/');
+  var nextText = nextHref.split('/');
 
   prevButtons.forEach(function (button) {
     button.setAttribute('href', prevHref);

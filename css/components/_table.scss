@@ -1,0 +1,69 @@
+.table {
+  padding: 0 0 2rem 0;
+
+  h2 {
+
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+
+
+    tr {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      align-items: center;
+      justify-items: center;
+
+      height: 3rem;
+    }
+
+    thead {
+      background-color: black;
+      color: white;
+
+      th {
+        font-size: .8rem;
+        line-height: 1rem;
+        // font-weight: normal;
+
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+    }
+
+
+    tbody {
+
+      tr {
+
+        &:nth-child(even) {
+          background-color: #f3f3f3;
+        }
+
+      }
+
+      td {
+        font-size: .8rem;
+        line-height: 1rem;
+
+        &:first-child {
+          font-weight: bold;
+        }
+      }
+
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          background-color: none;
+        }
+      }
+    }
+  }
+}

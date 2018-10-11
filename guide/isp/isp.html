@@ -18,7 +18,7 @@ permalink: /isp/
       <p>
         You might have noticed that many ISP's are phone and cable companies.
         Dial-up (phone wires), cable, DSL, satellite, fiber optics and much more are the physical mediums which data is transferred over.
-        Use this handy <a href="https://www.whoismyisp.org">website to see your ISP</a>
+        Use this handy <a href="https://www.whoismyisp.org">website to see your ISP</a>.
       </p>
     </div>
 
@@ -33,22 +33,81 @@ permalink: /isp/
       <p>
         The only way to prevent your ISP from tracking you is using a <a href="#">VPN</a> (Virtual Private Network) or <a href="https://lifehacker.com/5923017/how-can-i-prevent-my-isp-from-tracking-my-every-move">TOR</a>.
       </p>
+    </div>
+
+    <section class="link-section">
+      <header>
+        <span class="read-icon"></span>
+        <h3>More Reading</h3>
+      </header>
 
       <ul>
         <li>
-          <a href="https://www.youtube.com/watch?v=ogBZD3mBRjQ">What Does Your ISP Know About You?</a>
+          <span class="link"></span>
+          <a href="https://www.youtube.com/watch?v=ogBZD3mBRjQ" target="_blank">What Does Your ISP Know About You?</a>
         </li>
         <li>
-          <a href="https://donottrack-doc.com/en/intro/">7 Part Documentary on Data Tracking</a>
+          <span class="link"></span>
+          <a href="https://donottrack-doc.com/en/intro/" target="_blank">7 Part Documentary on Data Tracking</a>
         </li>
         <li>
-          <a href="https://gizmodo.com/how-to-hide-your-browsing-history-from-your-snooping-is-1793687193">How to Hide Your Browsing History From Your Snooping ISP</a>
+          <span class="link"></span>
+          <a href="https://gizmodo.com/how-to-hide-your-browsing-history-from-your-snooping-is-1793687193" target="_blank">How to Hide Your Browsing History From Your Snooping ISP</a>
         </li>
         <li>
-          <a href="https://www.obdev.at/products/littlesnitch/index.html">See all your network connections with Little Snitch</a>
+          <span class="link"></span>
+          <a href="https://www.obdev.at/products/littlesnitch/index.html" target="_blank">See all your network connections with Little Snitch</a>
         </li>
       </ul>
-    </div>
+
+    </section>
+
+    <section class="risks">
+      <header>
+        <h3>Risks</h3>
+      </header>
+      <ul>
+        <li>
+          <span class="tracking-icon"></span>
+          <p>
+            ISP's store your search records and sell your meta-data to advertisers
+          </p>
+        </li>
+        <li>
+          <span class="spying-icon"></span>
+          <p>
+            ISP's may insert tracking cookies into your search requests
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="fixes">
+      <header>
+        <h3>Fixes</h3>
+      </header>
+      <ul class="chapter-links">
+        <a href="{{site.baseurl}}dns/" class="section-link">
+          <span class="browser-blank"></span>
+          <p>
+            Use a different DNS service for increased speed and privacy
+          </p>
+        </a>
+        <a href="{{site.baseurl}}vpn-tor/" class="section-link">
+          <span class="extension"></span>
+          <p>
+            Use a VPN or TOR browser to hide traffic from your ISP
+          </p>
+        </a>
+        <a href="{{site.baseurl}}browser/blockers" class="section-link">
+          <span class="extension"></span>
+          <p>
+            Find a better ISP provider
+          </p>
+        </a>
+      </ul>
+    </section>
+
   </section>
   <footer class="page-footer">
     {% include nav-page.html prev="/overview/" next="/browser/" %}

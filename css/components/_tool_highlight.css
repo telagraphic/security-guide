@@ -1,0 +1,26 @@
+.tool-highlight {
+  padding: 1rem 0 .5rem 0;
+}
+
+.tool-highlight ul {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tool-highlight li {
+  flex: 1 1 50%;
+  padding: .5rem 0 .5rem 2rem;
+  position: relative;
+}
+
+.tool-highlight li::before {
+  background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EProtected%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Cpath stroke-width='2' stroke-miterlimit='10' stroke='%23202020' fill='none' d='M19 30.3v-15a13 13 0 0 1 13-13 13 13 0 0 1 13 13v15' data-name='layer2' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3Cpath stroke-width='2' stroke-miterlimit='10' stroke='%23202020' fill='none' d='M23 30.3v-15a9 9 0 0 1 18 0v15' data-name='layer2' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3Cpath d='M10 29.8h44v32H10z' stroke-width='2' stroke-miterlimit='10' stroke='%23202020' fill='none' data-name='layer1' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3Cpath stroke-width='2' stroke-miterlimit='10' stroke='%23202020' fill='none' d='M34 48.7a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2 2 2 0 0 1 2 2z' data-name='layer1' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E") scroll 0 0 no-repeat;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: .75rem;
+  left: .2rem;
+}

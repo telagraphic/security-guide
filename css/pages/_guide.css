@@ -22,8 +22,6 @@
 .chapter-section {
   grid-area: content;
   margin: 2rem auto 0 auto;
-  width: 69%;
-  padding: 1rem;
 }
 
 .chapter-section h3 {

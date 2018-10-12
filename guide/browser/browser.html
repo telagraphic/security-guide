@@ -6,88 +6,121 @@ permalink: /browser/
 
 <article class="chapter-contents">
   {% include nav-page.html prev="/isp" next="/browser/alternatives" %}
-  <section class="chapter-section">
-    <div class="section-content">
-      <h1>Browser</h1>
-      <p>
-        The browser is the application that connects to the world wide web from your computer/device.
-        It works with DNS and HTTP to fetch websites and read the HTML, CSS, code and other content for the browser to display.
-      </p>
+  <section class="chapter-section browser">
+    <section class="section-content chapter-intro">
+      <header>
+        <span class="browser-code-icon"></span>
+        <h1>Web Browser</h1>
+      </header>
 
-      <section class="risks">
-        <header>
-          <h3>Risks</h3>
+      <section class="introduction">
+        <p>
+          The browser is the application that connects to the world wide web from your computer/device.
+          It works with DNS and HTTP to fetch websites and read the HTML, CSS, code and other content for the browser to display.
+        </p>
+      </section>
+    </section>
+
+    <section class="section-content">
+      <section class="section-risk">
+        <header class="risk-header">
+          <span class="browser-warning-icon"></span>
+          <h2>Browser Risks</h2>
         </header>
+
         <ul>
           <li>
-            <span class="risk"></span>
-            <p>
-              3rd-party cookies from advertisers track you across websites and
-              collect your clicks
-            </p>
+            <span class="tracking-icon"></span>
+            <section>
+              <h4>3rd-Party Cookies</h4>
+              <p>
+                Advertisers track you across websites and collect your clicks
+              </p>
+            </section>
           </li>
           <li>
-            <span class="risk"></span>
-            <p>
-              These tracking cookies can 'fingerprint' your identity build a profile of your online habits
-            </p>
+            <span class="hand-icon"></span>
+            <section>
+              <h4>Browser Fingerprinting</h4>
+              <p>
+                Ad trackers build a profile of your online habits
+              </p>
+            </section>
           </li>
           <li>
-            <span class="risk"></span>
-            <p>Visiting non-HTTPS websites leaves your communications unencrypted</p>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>Non-HTTPS</h4>
+              <p>
+                Plain HTTP websites leaves your communications unencrypted
+              </p>
+            </section>
           </li>
           <li>
-            <span class="risk"></span>
-            <p>Private browsing does not protect your information from your employer or ISP!</p>
+            <span class="private-eye-icon"></span>
+            <section>
+              <h4>Private Browsing</h4>
+              <p>
+                Private tabs do not protect your information from your employer or ISP!
+              </p>
+            </section>
           </li>
         </ul>
       </section>
+    </section>
 
-      <section class="fixes">
+    <section class="section-content">
+      <section class="section-fixes">
         <header>
-          <h3>Fixes</h3>
+          <h2>Browser Fixes</h2>
         </header>
         <ul class="chapter-links">
           <a href="{{site.baseurl}}browser/alternatives" class="section-link">
-            <span class="browser-blank"></span>
+            <span class="browser-blank-icon"></span>
             <p>
               Check out new browsers that emphasize security and privacy
             </p>
           </a>
           <a href="{{site.baseurl}}browser/blockers" class="section-link">
-            <span class="extension"></span>
+            <span class="extension-icon"></span>
             <p>
               Increase your online security and privacy with browser extensions
             </p>
           </a>
           <a href="{{site.baseurl}}browser/https" class="section-link">
-            <span class="signal"></span>
+            <span class="signal-icon"></span>
             <p>
               HTTPS is becoming a standard, learn how to set it up
             </p>
           </a>
           <a href="{{site.baseurl}}browser/private-browsing" class="section-link">
-            <span class="private-eye"></span>
+            <span class="private-eye-icon"></span>
             <p>
               Understand what private browsing does and what you might really need to do
             </p>
           </a>
           <a href="{{site.baseurl}}browser/tor" class="section-link">
-            <span class="browser-check"></span>
+            <span class="browser-check-icon"></span>
             <p>
               TOR browser will hide your traffic from your employer or ISP or any network.
             </p>
           </a>
           <a href="{{site.baseurl}}browser/links" class="section-link">
-            <span class="browser-upload"></span>
+            <span class="browser-upload-icon"></span>
             <p>
               Read more about browsers and privacy
             </p>
           </a>
         </ul>
       </section>
-    </div>
+    </section>
+
+
+
+
   </section>
+
+
 
   <footer class="page-footer">
     {% include nav-page.html prev="/isp" next="/browser/alternatives" %}

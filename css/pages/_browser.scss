@@ -5,14 +5,13 @@
 
 
 .browser {
-  min-height: 100%;
 
   .chapter-intro {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: .5fr 2.5fr;
-    grid-template-rows: 20% 80%;
-    height: 100vh;
+    // grid-template-rows: 20% 80%;
+    min-height: 100vh;
     @include section-width;
 
 
@@ -22,10 +21,11 @@
       grid-template-rows: min-content;
       align-items: center;
 
-
       span {
         width: 6rem;
         height: 6rem;
+
+        // object-fit?
       }
 
       h1 {
@@ -50,7 +50,7 @@
     display: grid;
     grid-template-rows: .5fr 3fr;
     grid-template-areas: "sub-header" "section-content";
-    height: 100vh;
+    min-height: 100vh;
 
     @include section-width;
 
@@ -122,16 +122,13 @@
   }
 
   .section-fixes {
-
-
-
     --hover: #82DE82;
     --hover: #b7f7b7;
 
     display: grid;
     grid-template-rows: .5fr 3fr;
     grid-template-areas: "sub-header" "section-content";
-    height: 100vh;
+    min-height: 100vh;
 
     @include section-width;
 
@@ -144,7 +141,7 @@
       grid-area: section-content;
 
       margin: 0;
-      padding: 2rem 0;
+      // padding: 2rem 0;
     }
 
     a {
@@ -183,15 +180,5 @@
 
       }
     }
-
-
-
-
-
-
   }
-
-
-
-
 }

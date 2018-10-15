@@ -4,20 +4,16 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: 100vh;
+  grid-template-rows: auto 100vh;
   grid-template-columns: 100vw;
-  grid-template-areas: "content";
-
-  // @media (min-width: 42em) {
-  //   grid-template-columns: 1fr 2.5fr;
-  //   grid-template-areas: "nav content";
-  // }
+  grid-template-areas: "nav" "content";
 }
 
 nav.main-menu {
-  
+  grid-area: nav;
 
   @media (min-width: 42em) {
+
     display: flex;
     height: 100vh;
     position: fixed;
@@ -29,7 +25,6 @@ nav.main-menu {
 
 section.page-container {
   grid-area: content;
-
   height: 100vh;
   overflow-y: scroll;
 }

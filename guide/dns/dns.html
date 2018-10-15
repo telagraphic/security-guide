@@ -5,61 +5,154 @@ permalink: /dns/
 ---
 
 
-
-<article class="chapter-contents">
+<article class="chapter-wrapper">
   {% include nav-page.html prev="/browser" next="/dns/services" %}
-  <section class="chapter-section">
-    <div class="section-content">
-      <h1>DNS</h1>
-      <p>
-        DNS is the phonebook of the Internet. Most of us use the DNS servers provided by our ISP.
-        DNS in not encrypted and your ISP can easily see all your internet DNS requests.
-        Once again, your browser's private or incognito mode does not anonymize your internet requests.
-        Just another reason to distrust your ISP.
-      </p>
-      <p>
-        But their are new DNS services on the block that are faster, reduce malware, phishing and scam sites. And for the parents, some do automatic content filtering.
-        It is also relatively straightforward and simple to make these changes.
-        A DNS change is kind of a power user tip and isn't necessary, but try out a couple options and see what works best.
-        The good folks are <a href="https://www.lifewire.com">Lifewire.com</a> have tons of great articles on the how and why.
-      </p>
-      <p>
-        Checkout out this <a href="https://howdns.works">illustrated comic guide</a>.
-      </p>
+  <section class="chapter-contents">
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>
-          <a href="{{site.baseurl}}dns/services" class="section-link">Use new service</a> that don't track you, block ads and increase speed and performance.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}dns/hosts" class="section-link">Hosts file</a> can be modified to prevent ad networks and bad actor sites
-        </li>
-        <li>
-          <a href="{{site.baseurl}}dns/links" class="section-link">Read more about DNS</a>.
-        </li>
-      </ul>
+    <section class="chapter-section">
 
-      <h4>Learn More About DNS:</h4>
-      <ul>
-        <li>
-          <a href="http://unixwiz.net/techtips/iguide-kaminsky-dns-vuln.html">DNS Behind the Scenes</a>
-        </li>
-        <li>
-          <a href="https://youtu.be/BCjUbpIzRs8">DNS Video Explanation</a>
-        </li>
-        <li>
-          <a href="https://youtu.be/T-eghY-9WdE">In Depth DNS Video</a>
-        </li>
-        <li>
-          <a href="https://blog.thousandeyes.com/ranking-performance-public-dns-providers-2018/">DNS Performance Video Report</a>
-        </li>
-        <li>
-          <a href="https://www.lifewire.com/what-is-a-dns-server-2625854">What is a DNS Server?</a>
-        </li>
-      </ul>
-    </div>
+      <section class="section-content chapter-intro">
+        <header>
+          <span class="dns-phonebook-icon"></span>
+          <h1>DNS</h1>
+        </header>
+
+        <section>
+
+          <article>
+            <p>
+              DNS is the phonebook of the Internet.
+              It translates human readable domain names like apple.com to computer addresses such as 11.423.35.1.
+              DNS is the first step of looking up a webpage.
+            </p>
+
+            <p>
+              Most of us use the DNS servers provided by our ISP.
+              DNS in not encrypted and your ISP can easily see all your internet DNS requests.
+              Once again, your browser's private or incognito mode does not anonymize your internet requests.
+            </p>
+
+            <p>
+              Checkout out this <a href="https://howdns.works">illustrated comic guide</a>.
+            </p>
+          </article>
+
+          <ul>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+          </ul>
+
+        </section>
+
+      </section>
+
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-content section-risk">
+        <header>
+          <!-- <span class="browser-warning-icon"></span> -->
+          <h2>DNS Risks</h2>
+        </header>
+
+        <ul>
+          <li>
+            <span class="unlock-icon"></span>
+            <section>
+              <h4>Unencrypted</h4>
+              <p>
+                DNS queries are sent in clear text (using UDP or TCP) which means passive eavesdroppers can observe all the DNS lookups performed
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="data-sharing-icon"></span>
+            <section>
+              <h4>ISP's May Share DNS</h4>
+              <p>
+                ISP can share this information with third-parties in ways not known or obvious to end users
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="data-lookup-icon"></span>
+            <section>
+              <h4>Embedded User Information</h4>
+              <p>
+                Some ISPs embed user information (e.g. a user id or MAC address) within DNS queries that go to the ISPs resolver in order to provide services such as Parental Filtering
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>DNS Leaks</h4>
+              <p>
+                Note that even when using a VPN some VPNs will still leak your DNS queries by sending them unencrypted to your ISP
+              </p>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-fixes">
+        <header>
+          <h2>DNS Fixes</h2>
+        </header>
+        <ul class="chapter-links">
+          <a href="{{site.baseurl}}dns/services" class="section-link">
+            <span class="browser-blank-icon"></span>
+            <section>
+              <h4>DNS Service</h4>
+              <p>
+                Increase speed, privacy, and block ads with a new service
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}dns/hosts" class="section-link">
+            <span class="extension-icon"></span>
+            <section>
+              <h4>HOST Files</h4>
+              <p>
+                Add domain names for blacklisting bad actor websites
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}dns/encrypted" class="section-link">
+            <span class="private-eye-icon"></span>
+            <section>
+              <h4>Encrypt Your DNS Queries</h4>
+              <p>
+                Encrypt your DNS requests with some code
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}dns/links" class="section-link">
+            <span class="signal-icon"></span>
+            <section>
+              <h4>Learn More</h4>
+              <p>
+                Learn more about how DNS works
+              </p>
+            </section>
+
+          </a>
+        </ul>
+      </section>
+    </section>
+
   </section>
+
+
 
   <footer class="page-footer">
     {% include nav-page.html prev="/browser" next="/dns/services" %}

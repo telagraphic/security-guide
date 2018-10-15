@@ -1,10 +1,10 @@
-// <article class="chapter-contents">
-//   <section class="chapter-section">
-//     <div class="section-content">
+// <article class="chapter-wrapper">
+//   <section class="chapter-contents">
+//     <div class="chapter-section">
 //
-//     <section class="chapter-section">
+//     <section class="chapter-contents">
 //       <h3>Alternatives</h3>
-//       <div class="section-content">
+//       <div class="chapter-section">
 
 
 .chapter {
@@ -25,10 +25,9 @@
 
     }
   }
-
 }
 
-.chapter-contents {
+.chapter-wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
@@ -47,16 +46,14 @@
 
 }
 
-.page-nav {
+.sub-menu {
   grid-area: nav;
 }
 
-.chapter-section {
+.chapter-contents {
   grid-area: content;
 
   margin: 2rem auto 0 auto;
-  // width: 69%;
-  // padding: 1rem;
 
   h3 {
     color: var(--sub-header);
@@ -64,7 +61,7 @@
 }
 
 
-.section-content {
+.chapter-section {
   color: var(--body-copy);
 }
 

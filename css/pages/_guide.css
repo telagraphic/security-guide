@@ -7,7 +7,7 @@
   color: var(--body-copy);
 }
 
-.chapter-contents {
+.chapter-wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
@@ -15,20 +15,20 @@
   min-height: 100%;
 }
 
-.page-nav {
+.sub-menu {
   grid-area: nav;
 }
 
-.chapter-section {
+.chapter-contents {
   grid-area: content;
   margin: 2rem auto 0 auto;
 }
 
-.chapter-section h3 {
+.chapter-contents h3 {
   color: var(--sub-header);
 }
 
-.section-content {
+.chapter-section {
   color: var(--body-copy);
 }
 

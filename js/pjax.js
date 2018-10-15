@@ -1,8 +1,8 @@
 //  get main-menu and intercept clicks
 var mainMenu = document.querySelector('.main-menu');
-var pageContainer = document.querySelector('.page-container');
-var chapterContents = document.querySelector('.chapter-contents');
-var chapterSection = document.querySelector('.chapter-section');
+var pageContainer = document.querySelector('.container');
+var chapterContents = document.querySelector('.chapter-wrapper');
+var chapterSection = document.querySelector('.chapter-contents');
 
 var request = {
   button: false,
@@ -65,7 +65,7 @@ function fetchPage(request) {
 }
 
 function fetchSection(request) {
-  var chapterSection = document.querySelector('.chapter-section');
+  var chapterSection = document.querySelector('.chapter-contents');
   toggleContent(chapterSection, request.button);
 
   var xhr = new XMLHttpRequest();
@@ -98,7 +98,7 @@ function loadPage(contents, url, browserButton) {
 
   // add up css styles animation time for this duration
   setTimeout(function () {
-    pageContainer.innerHTML = contents.querySelector('.page-container').innerHTML;
+    pageContainer.innerHTML = contents.querySelector('.container').innerHTML;
   }, 200);
 
   pushState(browserButton, url);
@@ -111,14 +111,14 @@ function loadPage(contents, url, browserButton) {
 }
 
 function loadSection(section, url, browserButton) {
-  var chapterSection = document.querySelector('.chapter-section');
+  var chapterSection = document.querySelector('.chapter-contents');
   document.title = section.querySelector('title').innerHTML;
 
   updateNavigation(section);
 
   // add up css styles animation time for this duration
   setTimeout(function () {
-    chapterSection.innerHTML = section.querySelector('.chapter-section').innerHTML;
+    chapterSection.innerHTML = section.querySelector('.chapter-contents').innerHTML;
   }, 100);
 
   pushState(browserButton, url);

@@ -1,0 +1,196 @@
+@import "../utils/mixins";
+
+.chapter-intro {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: .5fr 2.5fr;
+  min-height: 100vh;
+  @include section-width(69%);
+
+
+  header {
+    display: grid;
+    grid-template-columns: max-content min-content;
+    grid-template-rows: min-content;
+    align-items: center;
+
+    span {
+      width: 6rem;
+      height: 6rem;
+      object-fit: contain;
+    }
+
+    h1 {
+
+      padding: 1rem;
+
+      color: black;
+
+    }
+  }
+
+  section {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    width: 100%;
+
+    padding: 2rem 0;
+    margin: 0;
+
+    article {
+
+      p + p {
+        padding: 1rem 0;
+      }
+
+    }
+
+    ul {
+      padding: 2rem;
+      font-size: .6rem;
+    }
+
+
+  }
+}
+
+.section-risk {
+  display: grid;
+  grid-template-rows: .5fr 3fr;
+  grid-template-areas: "sub-header" "chapter-section";
+  min-height: 100vh;
+
+  @include section-width(69%);
+
+  header {
+    grid-area: sub-header;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    align-self: center;
+
+    span {
+      justify-self: center;
+      align-self: self-start;
+
+      width: 3.5rem;
+      height: 3.5rem;
+
+    }
+
+    h2 {
+      align-self: center;
+
+      padding: 0 1rem;
+    }
+  }
+
+  ul {
+    grid-area: chapter-section;
+
+    padding: 2rem 0;
+
+    li {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: auto;
+      align-items: center;
+
+      padding: 1rem 0;
+
+
+      span {
+        justify-self: center;
+        align-self: self-start;
+
+        height: 2rem;
+        width: 2rem;
+      }
+
+      section {
+        padding: 0 1rem;
+      }
+
+      h4 {
+        padding: 0 0 .5rem 0;
+      }
+
+      p {
+        padding: 0;
+        margin: 0;
+      }
+
+    }
+  }
+
+}
+
+.section-fixes {
+  --hover: #82DE82;
+  --hover: #b7f7b7;
+
+  display: grid;
+  grid-template-rows: .5fr 3fr;
+  grid-template-areas: "sub-header" "chapter-section";
+  min-height: 100vh;
+
+  @include section-width(69%);
+
+  header {
+    grid-area: sub-header;
+
+  }
+
+  ul {
+    grid-area: chapter-section;
+
+    margin: 0;
+  }
+
+  a {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    align-items: center;
+
+    min-height: 5rem;
+    padding: 1rem 0;
+    border-left: 5px solid transparent;
+
+    text-decoration: none;
+
+    transition-property: background-color, border-left;
+    transition-duration: .2s;
+    transition-timing-function: ease-in;
+
+
+    &:focus,
+    &:hover {
+      background-color: var(--hover);
+      border-left: 5px solid #27bf36;
+    }
+
+    span {
+      justify-self: center;
+      align-self: self-start;
+
+      width: 2rem;
+      height: 2rem;
+    }
+
+    section {
+      padding: 0 1rem;
+    }
+
+    h4 {
+      padding: 0 0 .5rem 0;
+    }
+
+    p {
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

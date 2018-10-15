@@ -2,10 +2,14 @@
 # Front Matter
 ---
 
+@import "utils/mixins";
+@import "utils/functions";
+
 @import "base/normalize";
 @import "base/defaults";
 @import "base/typography";
 @import "base/fonts";
+@import "base/colors";
 
 @import "components/links";
 @import "components/link-section";
@@ -16,15 +20,15 @@
 @import "components/fixes";
 @import "components/tool_highlight";
 @import "components/table";
-@import "components/icons";
 
+@import "components/icons";
+@import "components/chapter_intro";
 
 
 @import "pages/grid";
 @import "pages/home";
 @import "pages/guide";
-@import "pages/browser";
 
 
-@import "includes/main-menu";
-@import "includes/nav-page";
+@import "includes/main_menu";
+@import "includes/sub_menu";

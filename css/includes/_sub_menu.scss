@@ -1,6 +1,25 @@
+// <nav class="sub-menu">
+//   <a href="{{include.prev}}" class="section-link">
+//     <section class="prev prev-icon">
+//     </section>
+//   </a>
+//
+//   <section class="">
+//     <button class="menu-button">MENU</button>
+//   </section>
+//
+//
+//   <a href="{{include.next}}" class="section-link">
+//     <section class="next next-icon">
+//     </section>
+//   </a>
+// </nav>
+
+
 .sub-menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 
   background-color: black;
   color: white;
@@ -15,28 +34,47 @@
     color: black;
   }
 
-  .prev {
-    padding: 0 1rem;
 
-    a {
-      width: 2.5rem;
-      height: 2.5rem;
+  a {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    .prev {
+      padding: 0 1rem;
+
+      z-index: 10;
     }
   }
 
-  .next {
-    padding: 0 1rem;
 
-    a {
-      width: 2.5rem;
-      height: 2.5rem;
+  a {
+    width: 2.5rem;
+    height: 2.5rem;
+
+    .next {
+      padding: 0 1rem;
+
+      z-index: 10;
     }
   }
 
-  .menu-button {
-    background-color: black;
-    color: white;
+
+
+  section {
+
+
+    .menu-button {
+      background-color: black;
+      color: white;
+
+
+      @media (min-width: 42em) {
+        background-color: white;
+        color: black;
+      }
+    }
   }
+
 
 
 

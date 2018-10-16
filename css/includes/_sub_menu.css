@@ -1,0 +1,49 @@
+.sub-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: .5rem;
+}
+
+@media (min-width: 42em) {
+  .sub-menu {
+    padding: 0;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+  }
+}
+
+.sub-menu a {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.sub-menu a .prev {
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.sub-menu a {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.sub-menu a .next {
+  padding: 0 1rem;
+  z-index: 10;
+}
+
+.sub-menu section .menu-button {
+  background-color: black;
+  color: white;
+}
+
+@media (min-width: 42em) {
+  .sub-menu section .menu-button {
+    background-color: white;
+    color: black;
+  }
+}

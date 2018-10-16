@@ -6,56 +6,160 @@ permalink: /vpn-tor/
 
 
 <article class="chapter-wrapper">
-  {% include nav-page.html prev="/search-engines/" next="/vpn-tor/vpn-about" %}
+  {% include nav-page.html prev="/browser" next="/dns/services" %}
   <section class="chapter-contents">
-    <div class="chapter-section">
-      <h1>VPN & TOR</h1>
-      <p>
-        The most effective ways to block your ISP and others from reading your surfing.
-      </p>
 
-      <h3>Risks</h3>
-      <ul>
-        <li>
-          3rd-party cookies from advertisers track you across websites when you visit a site that saves the cookie to your vpn-tor
-        </li>
-        <li>
-          These cookies can 'fingerprint' your identity through sophisticated means, sending data to trackers that can create an identity profile
-        </li>
-        <li>
-          Not using HTTPS on leaves your communications unprotected
-        </li>
-        <li>
-          Private browsing does not protect your information from your employer or ISP!
-        </li>
-      </ul>
+    <section class="chapter-section">
 
+      <section class="section-content chapter-intro">
+        <header>
+          <span class="browser-check-icon"></span>
+          <h1>VPN TOR</h1>
+        </header>
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>
-          <a href="{{site.baseurl}}vpn-tor/vpn-about">Find out when you really need to use a VPN</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}vpn-tor/vpn-services">How to choose a VPN service</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}vpn-tor/vpn-diy">DIY</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}vpn-tor/vpn-links">Read more about VPN's and helpful links</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}vpn-tor/tor-about">When does TOR become a good idea</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}vpn-tor/tor-links">Helpful TOR links</a>
-        </li>
-      </ul>
-    </div>
+        <section>
+
+          <article>
+            <p>
+              Virtual Private Network (VPN) is a tool to anonymize your web surfing.
+              You can hide your traffic from your ISP or employer.
+              It is a server that sits between your computer and the site you are visiting.
+            </p>
+
+            <p>
+              The TOR network stands for the The Onion Router, it is a layered network setup
+              that hides your IP address. It is much slower than a normal connection.
+              TOR is useful for journalists under threat. It is used for dark web activities as well.
+            </p>
+
+          </article>
+
+          <ul>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+          </ul>
+
+        </section>
+
+      </section>
+
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-content section-risk">
+        <header>
+          <!-- <span class="browser-warning-icon"></span> -->
+          <h2>Risks</h2>
+        </header>
+
+        <ul>
+          <li>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>Public Spy Wi-Fi</h4>
+              <p>
+                Coffeeshops, airports and hotels have low to no security safeguards, exposing
+                potential business or personal information
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="anonymous-profile-icon"></span>
+            <section>
+              <h4>Anonymous Surfing</h4>
+              <p>
+                Hiding your IP address is similar to masking your phone number which is important in some cases
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="radar-tracking-icon"></span>
+            <section>
+              <h4>Don't Get Tracked</h4>
+              <p>
+                TOR was designed to prevent 'traffic analysis', a form of network surviellance that
+                we are not protected from without special tools
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>DNS Leaks</h4>
+              <p>
+                Even using a VPN, leaked DNS queries can give away your online behavior
+              </p>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-fixes">
+        <header>
+          <h2>VPN & TOR Fixes</h2>
+        </header>
+        <ul class="chapter-links">
+          <a href="{{site.baseurl}}vpn-tor/vpn-about" class="section-link">
+            <span class="question-mark-icon"></span>
+            <section>
+              <h4>Do you really need a VPN?</h4>
+              <p>
+                There are good reasons for a VPN but other options as well
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}vpn-tor/vpn-about" class="section-link">
+            <span class="purchase-icon"></span>
+            <section>
+              <h4>How To Choose A VPN Service</h4>
+              <p>
+                An practical guide to understanding VPN considerations.
+                Many services are schemes to fool you!
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}vpn-tor/vpn-services" class="section-link">
+            <span class="router-wifi-icon"></span>
+            <section>
+              <h4>Laptop and Mobile Security</h4>
+              <p>
+                Public Wi-Fi at coffeeshops, airports and hotels are perfect places to use a VPN
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}vpn-tor/vpn-diy" class="section-link">
+            <span class="browser-code-icon"></span>
+            <section>
+              <h4>DIY VPN</h4>
+              <p>
+                Super paranoid?  Then build your own solution.
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}vpn-tor/tor-about" class="section-link">
+            <span class="signal-icon"></span>
+            <section>
+              <h4>Learn about TOR</h4>
+              <p>
+                Learn about the decentralized anonymous networking of TOR
+              </p>
+            </section>
+          </a>
+        </ul>
+      </section>
+    </section>
   </section>
 
   <footer class="page-footer">
-    {% include nav-page.html prev="/search-engines/" next="/vpn-tor/vpn-about" %}
+    {% include nav-page.html prev="/search-engine/" next="/vpn-tor/vpn-about" %}
   </footer>
 </article>

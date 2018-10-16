@@ -74,12 +74,13 @@
 
     section {
       display: block;
-      // opacity: 0;
+      height: 0;
+      width: 0;
+
       visibility: hidden;
       transform: translateY(15%);
       transition: transform .15s ease-in;
-      height: 0;
-      width: 0;
+
 
       // transition-property: visibility;
       // transition-duration: .1s;
@@ -87,14 +88,42 @@
 
       &.show-preview {
         display: flex;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         height: 100%;
         width: 100%;
-        // opacity: 1;
+
         visibility: visible;
+        color: white;
 
         transform: translateY(0%);
+      }
+
+      header {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+        span {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        h1 {
+          color: white;
+          padding: 1rem;
+        }
+
+      }
+
+      ul {
+        display: flex;
+        flex-flow: column nowrap;
+
+        li {
+          padding: .2rem 0;
+        }
       }
     }
   }

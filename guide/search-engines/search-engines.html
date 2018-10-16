@@ -6,51 +6,163 @@ permalink: /search-engines/
 
 
 <article class="chapter-wrapper">
-  {% include nav-page.html prev="/dns" next="/vpn-tor" %}
+  {% include nav-page.html prev="/dns/" next="/vpn-tor/" %}
   <section class="chapter-contents">
-    <div class="chapter-section">
-      <h1>Search Engines</h1>
-      <p>
-        The browser is the application that connects to the world wide web from your computer/device.
-        It works with DNS and HTTP to fetch websites and read the HTML, CSS, code and other content for the browser to display.
-      </p>
 
-      <h3>Risks</h3>
-      <ul>
-        <li>
-          3rd-party cookies from advertisers track you across websites when you visit a site that saves the cookie to your browser
-        </li>
-        <li>
-          These cookies can 'fingerprint' your identity through sophisticated means, sending data to trackers that can create an identity profile
-        </li>
-        <li>
-          Not using HTTPS on leaves your communications unprotected
-        </li>
-        <li>
-          Private browsing does not protect your information from your employer or ISP!
-        </li>
-      </ul>
+    <section class="chapter-section">
 
+      <section class="section-content chapter-intro">
+        <header>
+          <span class="search-icon"></span>
+          <h1>Search Engines</h1>
+        </header>
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>
-          <a href="{{site.baseurl}}router/checklist">Router Checklist</a>: one of the most important chapters in this guide
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/wi-fi">Wi-Fi</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/firewall">Setup your firewall</a>.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/links">More about your router than you wanted to know</a>.
-        </li>
-      </ul>
-    </div>
+        <section>
+
+          <article>
+            <p>
+              Google, Bing and Yandex track, collect and store your search history.
+              They identify you with your computers' IP address, a unique identifier that is similar to a phone number for your computer.
+              Search engines also share your search terms and IP Address with websites you search for.
+            </p>
+
+            <p>
+              In other words, it is a very likely that websites and the companies that
+              own them are saving your search history and selling it.
+              Try these alternatives below.
+              DuckDuckGo and Start Page have a strong reputation for protecting user privacy.
+            </p>
+          </article>
+
+          <ul>
+            <li>
+              <a href="https://duckduckgo.com/privacy">What is search leakage?</a>
+            </li>
+            <li>
+              <a href="https://www.eff.org/https-everywhere/">What is HTTP and HTTPS?</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=-1nAyfHc0nU">Chrome settings to change now</a>
+            </li>
+          </ul>
+
+        </section>
+
+      </section>
+
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-content section-risk">
+        <header>
+          <!-- <span class="browser-warning-icon"></span> -->
+          <h2>Search Engine Risks</h2>
+        </header>
+
+        <ul>
+          <li>
+            <span class="unlock-icon"></span>
+            <section>
+              <h4>Ad Trackers</h4>
+              <p>
+                Ad trackers follow you around from site to site.
+                Google, Facebook and Twitter are the biggest offenders.
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="data-sharing-icon"></span>
+            <section>
+              <h4>Private Search</h4>
+              <p>
+                Google tracks your search history.
+                Like someone following behind you when you are driving.
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="data-lookup-icon"></span>
+            <section>
+              <h4>HTTPS</h4>
+              <p>
+                HTTP is unsecure, it's like not locking your front door.
+                HTTPS, the S is for secure is super easy to set up.
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>Search Leakage</h4>
+              <p>
+                When you click a site, your search terms are shared with the site.
+                IP address and user agent information is passed along as well.
+              </p>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-fixes">
+        <header>
+          <h2>Search Engine Fixes</h2>
+        </header>
+        <ul class="chapter-links">
+          <a href="https://duckduckgo.com/" target="_blank" class="section-link">
+            <span class="browser-blank-icon"></span>
+            <section>
+              <h4>
+                DuckDuckGo
+              </h4>
+              <p>
+                DuckDuckGo is centered on keeping your searches private.
+                There are several ways data about your searches can be leaked.
+                DuckDuckGo fixes that and uses Google under the hood.
+              </p>
+            </section>
+          </a>
+          <a href="https://www.startpage.com/" target="_blank" class="section-link">
+            <span class="browser-blank-icon"></span>
+            <section>
+              <h4>Start Page</h4>
+              <p>
+                Prevent trackers from following your web searches and hides
+                personal information that would reveal your potential online identity.
+              </p>
+            </section>
+          </a>
+          <a href="https://searx.me/" target="_blank" class="section-link">
+            <span class="browser-blank-icon"></span>
+            <section>
+              <h4>SearX</h4>
+              <p>
+                A metasearch engine that compiles results from other search engines.
+                They don't store personal information for creating online profiles.
+              </p>
+            </section>
+          </a>
+          <a href="https://www.qwant.com/" target="_blank" class="section-link">
+            <span class="browser-blank-icon"></span>
+            <section>
+              <h4>Qwant</h4>
+              <p>
+                Another alternative search engine that does not share information to
+                third-party services.
+              </p>
+            </section>
+
+          </a>
+        </ul>
+      </section>
+    </section>
+
   </section>
 
+
+
   <footer class="page-footer">
-    {% include nav-page.html prev="/dns" next="/vpn-tor" %}
+    {% include nav-page.html prev="/dns/" next="/vpn-tor/" %}
   </footer>
 </article>

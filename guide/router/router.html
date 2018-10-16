@@ -5,51 +5,143 @@ permalink: /router/
 ---
 
 
-
 <article class="chapter-wrapper">
-  {% include nav-page.html prev="/vpn-tor" next="/router/checklist" %}
+  {% include nav-page.html prev="/vpn-tor/" next="/router/checklist" %}
   <section class="chapter-contents">
-    <div class="chapter-section">
-      <h1>Router</h1>
-      <p>
-        The browser is the application that connects to the world wide web from your computer/device.
-        It works with DNS and HTTP to fetch websites and read the HTML, CSS, code and other content for the browser to display.
-      </p>
 
-      <h3>Risks</h3>
-      <ul>
-        <li>
-          3rd-party cookies from advertisers track you across websites when you visit a site that saves the cookie to your browser
-        </li>
-        <li>
-          These cookies can 'fingerprint' your identity through sophisticated means, sending data to trackers that can create an identity profile
-        </li>
-        <li>
-          Not using HTTPS on leaves your communications unprotected
-        </li>
-        <li>
-          Private browsing does not protect your information from your employer or ISP!
-        </li>
-      </ul>
+    <section class="chapter-section">
 
+      <section class="section-content chapter-intro">
+        <header>
+          <span class="signal-icon"></span>
+          <h1>Router</h1>
+        </header>
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>
-          <a href="{{site.baseurl}}router/checklist">Router Checklist</a>: one of the most important chapters in this guide
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/wi-fi">Wi-Fi</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/firewall">Setup your firewall</a>.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/links">More about your router than you wanted to know</a>.
-        </li>
-      </ul>
-    </div>
+        <section>
+
+          <article>
+            <p>
+              Your router is the bridge that connects the modem, the box that connects you to the Internet through an ISP,
+              to all the devices in your home. It is simply a networking device that allows multiple devices to connect to
+              the network, it makes sharing possible. It is the doorway into your home network, which makes it a major target
+              for hackers. Securing your router is like securing your front door.
+            </p>
+
+            <p>
+              Consumer based routers provided by your ISP or found in most retail outlets have many, many known software bugs,
+              some even "spy" on you.
+
+              Computer consultant Michael Horowitz runs one of the best,
+              if not the best website on <a href="https://routersecurity.org/index.php">Router Security</a>.
+              We'll learn how to set-up proper security the right way.
+            </p>
+
+          </article>
+
+          <ul>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+            <li>
+              <a href="https://howdns.works">illustrated comic guide</a>
+            </li>
+          </ul>
+
+        </section>
+
+      </section>
+
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-content section-risk">
+        <header>
+          <!-- <span class="browser-warning-icon"></span> -->
+          <h2>Router Risks</h2>
+        </header>
+
+        <ul>
+          <li>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>Router Setup</h4>
+              <p>
+                Most routers have default settings like passwords that hackers can easily guess
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="router-wifi-icon"></span>
+            <section>
+              <h4>Guest Access</h4>
+              <p>
+                Sharing your Wi-Fi password opens up entry points to your home network
+              </p>
+            </section>
+          </li>
+          <li>
+            <span class="signal-icon"></span>
+            <section>
+              <h4>ISP Provided Router</h4>
+              <p>
+                The router provided by your ISP has software bugs and are targets by hackers because of this
+              </p>
+            </section>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="chapter-section">
+      <section class="section-fixes">
+        <header>
+          <h2>Router Fixes</h2>
+        </header>
+        <ul class="chapter-links">
+          <a href="{{site.baseurl}}router/checklist" class="section-link">
+            <span class="router-checklist-icon"></span>
+            <section>
+              <h4>Router Security Checklist</h4>
+              <p>
+                Computer consultant Michael Horowitz extensive router checklist covers all you need to know
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}router/wi-fi" class="section-link">
+            <span class="router-wifi-icon"></span>
+            <section>
+              <h4>Wi-Fi Ideas</h4>
+              <p>
+                Check out some cool wi-fi security ideas
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}router/wi-fi" class="section-link">
+            <span class="router-firewall-icon"></span>
+            <section>
+              <h4>Turn on your Firewall</h4>
+              <p>
+                Firewalls keep outside attacks from getting in and it's easy to turn on
+              </p>
+            </section>
+          </a>
+          <a href="{{site.baseurl}}router/links" class="section-link">
+            <span class="book-icon"></span>
+            <section>
+              <h4>Learn More</h4>
+              <p>
+                School up on the details of router security before it's too late
+              </p>
+            </section>
+          </a>
+        </ul>
+      </section>
+    </section>
   </section>
+
   <footer class="page-footer">
     {% include nav-page.html prev="/vpn-tor/" next="/router/checklist" %}
   </footer>

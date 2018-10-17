@@ -52,8 +52,6 @@
     .prev {
       padding: 0 1rem;
 
-      z-index: 10;
-
       @include arrow-scale();
     }
   }
@@ -65,8 +63,6 @@
 
     .next {
       padding: 0 1rem;
-
-      z-index: 10;
 
       @include arrow-scale();
     }

@@ -82,10 +82,9 @@
 
   header {
     grid-area: sub-header;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    align-self: center;
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // align-self: center;
 
     span {
       justify-self: center;
@@ -179,8 +178,13 @@
 
   header {
     grid-area: sub-header;
-
     @include section-width(89%);
+
+    @media (min-width: 42em) {
+      @include section-width(100%);
+    }
+
+
 
   }
 
@@ -207,7 +211,6 @@
 
     }
 
-
     &:focus,
     &:hover {
       background-color: var(--hover);
@@ -222,6 +225,16 @@
       align-items: center;
 
       @include section-width(89%);
+
+      @media (min-width: 42em) {
+        justify-self: center;
+        align-self: self-start;
+
+        grid-template-columns: 1fr 5fr;
+        grid-template-areas: "icon sub-header" " . content";
+
+        @include section-width(100%);
+      }
     }
 
     span {
@@ -234,7 +247,7 @@
 
       @media (min-width: 42em) {
         justify-self: center;
-        align-self: self-start;
+        align-self: center;
       }
     }
 

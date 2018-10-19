@@ -1,0 +1,78 @@
+@import "../utils/mixins";
+
+
+.section-header {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: .5fr 2.5fr;
+  min-height: 100vh;
+  @include section-width(89%);
+
+
+  @media (min-width: 42em) {
+    @include section-width(69%);
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: max-content min-content;
+    grid-template-rows: min-content;
+    align-items: center;
+
+    span {
+      height: 6rem;
+      width: 6rem;
+    }
+
+    h1 {
+      padding: 1rem;
+      line-height: 2rem;
+    }
+  }
+
+  article {
+    padding: 3rem 0;
+
+    p + p {
+      text-indent: 1rem;
+    }
+
+  }
+
+}
+
+.tool-highlight {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: 15% 65% 20%;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: "header header" "summary features" "links links";
+
+  @include section-width(69%);
+
+
+  // @include section-width(89%);
+
+  @media (min-width: 42em) {
+
+  }
+
+
+  .tool-header {
+    grid-area: header;
+
+  }
+
+  .tool-summary {
+    grid-area: summary;
+  }
+
+  .tool-features {
+    grid-area: features;
+  }
+
+  .tool-footer {
+    grid-area: links;
+  }
+
+}

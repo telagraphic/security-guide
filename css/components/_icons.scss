@@ -410,3 +410,14 @@
   @include icon-background(2.5rem, 2.5rem);
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ECss3%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 2h52l-4 54-22 6-22-6L6 2z'%3E%3C/path%3E%3Cpath data-name='layer1' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19.7 38.2l.6 5.8L32 48l12-4 .9-14H19l27-14H18'%3E%3C/path%3E%3C/svg%3E");
 }
+
+
+.watch-video-icon {
+  @include icon-background(2.5rem, 2.5rem);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EStream Video%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Crect data-name='layer2' x='2' y='2' width='60' height='60' rx='10' ry='10' fill='none' stroke='%23202020' stroke-miterlimit='10' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'%3E%3C/rect%3E%3Cpath data-name='layer1' fill='none' stroke='%23202020' stroke-miterlimit='10' stroke-width='2' d='M24 22v20l20-10-20-10z' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.read-article-icon {
+  @include icon-background(2.5rem, 2.5rem);
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64' aria-labelledby='title' aria-describedby='desc' role='img' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EJournal%3C/title%3E%3Cdesc%3EA line styled icon from Orion Icon Library.%3C/desc%3E%3Cpath data-name='layer2' d='M24 51.9a8 8 0 0 1 8 8v-44a8 8 0 0 0-8-8H2v44zm8-36a8 8 0 0 1 8-8h22v44H40a8 8 0 0 0-8 8' fill='none' stroke='%23202020' stroke-miterlimit='10' stroke-width='2' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3Cpath data-name='layer1' fill='none' stroke='%23202020' stroke-miterlimit='10' stroke-width='2' d='M10 17.9h14m-14 8h14m-14 8h14m-14 8h14m16-24h14m-14 8h14m-14 8h14m-14 8h14' stroke-linejoin='round' stroke-linecap='round'%3E%3C/path%3E%3C/svg%3E");
+}

@@ -12,7 +12,6 @@
     @include section-width(69%);
   }
 
-
   header {
     display: grid;
     grid-template-columns: max-content min-content;
@@ -26,11 +25,11 @@
     }
 
     h1 {
-
       padding: 1rem;
 
-      line-height: 2rem;
       color: black;
+
+      line-height: 2rem;
 
     }
   }

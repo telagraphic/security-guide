@@ -1,53 +1,18 @@
+.chapter-toc {
+  display: flex;
+  flex-flow: column nowrap;
+  @include section-width(50%);
 
-.container {
-
-  nav.home {
-    display: flex;
-    flex-direction: column;
+  a {
+    text-decoration: none;
+    padding: 1rem 0;
   }
 
-  &.animating {
-
-    .chapter-wrapper {
-      opacity: 0;
-    }
+  h2 {
 
   }
 
-  .chapter-wrapper {
-    opacity: 1;
-    transition: opacity .2s ease-in;
+  p {
 
-    &.animating {
-
-      .chapter-contents {
-        opacity: 0;
-      }
-    }
-  }
-
-  .chapter-contents {
-    opacity: 1;
-
-
-    .chapter-section {
-      transform: translateX(0%);
-      // transform: translate3d(0, 0, 0);
-
-
-    }
-
-    &.animating {
-
-      .chapter-section {
-        transform: translateX(-125%);
-        // transform: translate3d(-125%, 0, 0);
-        transition: transform .2s ease-in;
-        width: 100%;
-
-        z-index: 20;
-
-      }
-    }
   }
 }

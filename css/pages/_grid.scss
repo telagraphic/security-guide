@@ -1,6 +1,10 @@
-body {
+@import "../utils/mixins";
 
+body {
+  min-height: 100%;
 }
+
+// top level grid
 
 main {
   display: grid;
@@ -27,4 +31,94 @@ section.container {
   grid-area: content;
   height: 100vh;
   overflow-y: scroll;
+}
+
+// guide grid
+
+.container {
+
+  &.animating {
+
+    .chapter-wrapper {
+      opacity: 0;
+    }
+
+  }
+
+  .chapter-wrapper {
+    opacity: 1;
+    transition: opacity .2s ease-in;
+
+    &.animating {
+
+      .chapter-contents {
+        opacity: 0;
+      }
+    }
+  }
+
+  .chapter-contents {
+    opacity: 1;
+
+    .chapter-section {
+      transform: translateX(0%);
+      // transform: translate3d(0, 0, 0);
+
+    }
+
+    &.animating {
+
+      .chapter-section {
+        transform: translateX(-125%);
+        // transform: translate3d(-125%, 0, 0);
+        transition: transform .2s ease-in;
+        width: 100%;
+
+        z-index: 20;
+
+      }
+    }
+  }
+}
+
+
+.chapter-wrapper {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  grid-template-areas: "nav" "content" "footer";
+
+  min-height: 100%;
+
+  @media (min-width: 42em) {
+
+  }
+
+}
+
+.sub-menu {
+  grid-area: nav;
+}
+
+.chapter-contents {
+  grid-area: content;
+
+  margin: 1rem auto 0 auto;
+
+  @media (min-width: 42em) {
+    margin: 2rem auto 0 auto;
+  }
+
+  h3 {
+    color: var(--sub-header);
+  }
+}
+
+
+.chapter-section {
+  color: var(--body-copy);
+}
+
+.page-footer {
+  grid-area: footer;
 }

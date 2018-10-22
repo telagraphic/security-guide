@@ -8,6 +8,7 @@
   @include section-width(89%);
 
   @media (min-width: 42em) {
+    grid-template-columns: 70%;
     grid-template-rows: .5fr 2.5fr;
     @include section-width(69%);
   }
@@ -73,10 +74,14 @@
         padding: .5rem 0;
 
         span {
-          align-self: center;
+          align-self: flex-start;
 
           width: 1.5rem;
           height: 1.5rem;
+
+          @media (min-width: 42em) {
+            align-self: center;
+          }
         }
 
         a {

@@ -47,6 +47,11 @@
     h4 {
       padding: 2rem 0 1rem 0;
     }
+
+    h2 + ul,
+    h3 + ul {
+      padding: 0 0 2rem 0;
+    }
   }
 
   ul {
@@ -90,7 +95,7 @@
         }
 
         @media (min-width: 42em) {
-          padding: 0;
+          padding: 0 0 0 1rem;
         }
       }
 
@@ -240,15 +245,36 @@
   }
 }
 
-.blockquote-excerpt {
-  margin: 1rem 0;
-  padding: 0 1rem;
+.blockquote {
+  padding: 1rem 0 2rem 0;
 
-  border-left: 5px solid black;
+  .blockquote-excerpt {
+    margin: 1rem 0;
+    padding: 0 1rem;
 
-  font-weight: 700;
+    border-left: 5px solid black;
 
-  p {
-    hanging-punctuation: first;
+    font-weight: 700;
+
+    p {
+      hanging-punctuation: first;
+    }
+
+    ul {
+      display: block;
+      padding: 0;
+      list-style-type: disc;
+      list-style-position: outside;
+      list-style-image: none;
+
+      li {
+        display: block;
+        font-weight: 400;
+      }
+    }
+  }
+
+  footer {
+    padding: 0 1rem;
   }
 }

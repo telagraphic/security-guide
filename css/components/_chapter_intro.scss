@@ -293,14 +293,24 @@
 
     h4 {
       grid-area: sub-header;
-      padding: .5rem 0;
+      padding: .5rem;
       font-size: 1.2rem;
+
+      @media (min-width: 42em) {
+        padding: .5rem 0;
+      }
+
     }
 
     p {
       grid-area: content;
       padding: 0;
       margin: 0;
+      padding: 1rem .5rem;
+
+      @media (min-width: 42em) {
+        padding: 0;
+      }
     }
   }
 }

@@ -8,47 +8,79 @@ permalink: /vpn-tor/vpn-about
 <article class="chapter-wrapper">
   {% include nav-page.html prev="/vpn-tor/" next="/vpn-tor/vpn-services" %}
   <section class="chapter-contents">
-    <div class="chapter-section">
-      <h1>VPN</h1>
-      <p>
-        The browser is the application that connects to the world wide web from your computer/device.
-        It works with DNS and HTTP to fetch websites and read the HTML, CSS, code and other content for the browser to display.
-      </p>
+    <section class="chapter-section section-header">
+      <header>
+        <span class="browser-code-icon"></span>
+        <h1>VPN</h1>
+      </header>
 
-      <h3>Risks</h3>
-      <ul>
-        <li>
-          3rd-party cookies from advertisers track you across websites when you visit a site that saves the cookie to your browser
-        </li>
-        <li>
-          These cookies can 'fingerprint' your identity through sophisticated means, sending data to trackers that can create an identity profile
-        </li>
-        <li>
-          Not using HTTPS on leaves your communications unprotected
-        </li>
-        <li>
-          Private browsing does not protect your information from your employer or ISP!
-        </li>
-      </ul>
+      <article>
+        <p>
+          A Virtual Private Network sits between your computer/device and the Internet,
+          it encrypts and anonymizes your connection, making it impossible or very challenging
+          for someone to trace you, view or modify your data. There are many VPN services,
+          some free or very cheap, that promise to not log your internet searching.
+        </p>
+        <p>
+          Some are <a href="https://motherboard.vice.com/en_us/article/xy99ww/phony-vpn-services-are-cashing-in-on-americas-war-on-privacy">probably scams</a>
+          <a href="https://restoreprivacy.com/vpn-scams/">and use shady practices</a>.
+          For good security, you need to learn about it and pay for it.
+        </p>
 
+        <p>
+          Some of the best VPN analysis, research and testing has been done by
+          <a href="https://thewirecutter.com/reviews/best-vpn-service/">The Wire Cutter</a>.
+          If your serious about a VPN, you need to read their
+          <a href="https://thewirecutter.com/reviews/best-vpn-service/">article on why you would use one and which service to use</a>.
+        </p>
 
-      <h3>Fixes</h3>
-      <ul>
-        <li>
-          <a href="{{site.baseurl}}router/checklist">Router Checklist</a>: one of the most important chapters in this guide
-        </li>
-        <li>
-          <a href="{{site.baseurl}}router/wi-fi">Wi-Fi</a>
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/firewall">Setup your firewall</a>.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/links">More about your router than you wanted to know</a>.
-        </li>
-      </ul>
-    </div>
+        <section class="blockquote">
+          <h3>Consider these steps before using a VPN:</h3>
+          <blockquote class="blockquote-excerpt" cite="https://thewirecutter.com/reviews/best-vpn-service/">
+            <ul>
+              <li>
+                <a href="{{site.baseurl}}passwords/managers">Use a password manager</a>
+              </li>
+              <li>
+                <a href="{{site.baseurl}}mobile-devices/2fa">Enable 2 Factor Authentication</a>
+              </li>
+              <li>
+                <a href="{{site.baseurl}}encryption">Encrypt your laptop</a>
+              </li>
+              <li>
+                <a href="{{site.baseurl}}browsers/blockers">Use browser extensions</a>
+              </li>
+            </ul>
+          </blockquote>
+          <footer>
+            - <a href="https://thewirecutter.com/reviews/best-vpn-service/">From Wirecutter.com</a>
+          </footer>
+        </section>
+
+        <p>
+          On a slightly but not surprising depressing note,
+          the <a href="https://arstechnica.com/tech-policy/2014/12/nsa-has-vpns-in-vulcan-death-grip-no-really-thats-what-they-call-it/">NSA has made major progress on decrypting VPN traffic</a>.
+        </p>
+
+        <ul>
+          <li>
+            <span class="read-article-icon"></span>
+            <a href="https://www.engadget.com/2017/04/07/good-luck-finding-a-safe-vpn/">Good Luck Finding A VPN</a>
+          </li>
+          <li>
+            <span class="read-article-icon"></span>
+            <a href="https://gist.github.com/joepie91/5a9909939e6ce7d09e29">Don't Use A VPN Service</a>
+          </li>
+          <li>
+            <span class="read-article-icon"></span>
+            <a href="https://torrentfreak.com/how-long-does-your-isp-store-ip-address-logs-120629/">ISP Logging Retention</a>
+          </li>
+        </ul>
+
+      </article>
+    </section>
   </section>
+
 
   <footer class="page-footer">
     {% include nav-page.html prev="/vpn-tor/" next="/vpn-tor/vpn-services" %}

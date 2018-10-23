@@ -130,12 +130,11 @@
 
       h5 {
         padding: 0 .5rem 0 0;
-        }
-      }
 
-      h5:focus + span,
-      h5:hover + span {
-        opacity: 1;
+        &:focus + span,
+        &:hover + span {
+          opacity: 1;
+        }
       }
 
       span {
@@ -150,6 +149,7 @@
         }
       }
     }
+  }
 
 
   .tool-summary {

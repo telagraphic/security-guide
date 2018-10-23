@@ -259,9 +259,9 @@
 
     section {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 5fr;
       grid-template-rows: auto;
-      grid-template-areas: "icon" "sub-header" "content";
+      grid-template-areas: "icon sub-header" "content content";
       align-items: center;
 
       @include section-width(89%);
@@ -279,8 +279,8 @@
 
     span {
       grid-area: icon;
-      justify-self: self-start;
-      align-self: self-start;
+      justify-self: center;
+      align-self: center;
 
       width: 2rem;
       height: 2rem;
@@ -293,7 +293,7 @@
 
     h4 {
       grid-area: sub-header;
-      padding: .5rem 0;
+      padding: .5rem;
       font-size: 1.2rem;
     }
 

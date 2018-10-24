@@ -123,9 +123,8 @@
 
   header {
     grid-area: sub-header;
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // align-self: center;
+
+    padding: 1rem 0;
 
     span {
       justify-self: center;
@@ -221,6 +220,8 @@
   header {
     grid-area: sub-header;
     @include section-width(89%);
+
+    padding: 1rem 0;
 
     @media (min-width: 42em) {
       @include section-width(100%);

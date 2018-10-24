@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Passwords
+title: Passwords in Databases
 permalink: /passwords/databases
 ---
 
@@ -8,53 +8,39 @@ permalink: /passwords/databases
 <article class="chapter-wrapper">
   {% include nav-page.html prev="/passwords/choosing-passwords" next="/passwords/legal" %}
   <section class="chapter-contents">
-    <div class="chapter-section">
-      <p>
-        The browser is the application that connects to the world wide web from your computer/device.
-        It works with DNS and HTTP to fetch websites and read the HTML, CSS, code and other content for the browser to display.
-      </p>
+    <section class="chapter-section section-header">
+      <header>
+        <span class="password-database-icon"></span>
+        <h1>Passwords & Databases</h1>
+      </header>
+      <article>
+        <p>
+          Once your awesome super secure password is saved
+          to the database of your new app or service,
+          it is now in the careful hands of the system admin,
+          database admin and security people. Or maybe no one at all.
+          The smart programmers who built,
+          designed and implemented authentication systems are human too.
+          They make basic mistakes.
+        </p>
+        <p>
+          There are many articles on the do' and don'ts of password storage.
+          <a href="https://auth0.com/blog/dont-pass-on-the-new-nist-password-guidelines/">
+            NIST recommends 'passwords be salted with at least 32 bits of data and hashed
+            with a one-way key derivation function such as Password-Based Key
+            Derivation Function 2 (PBKDF2) or Balloon</a>.
+          This stuff is complicated and there are many steps along the
+          process that can be missed or exploited by hackers.
+        </p>
 
-      <h3>Risks</h3>
-      <ul>
-        <li>
-          3rd-party cookies from advertisers track you across websites when you visit a site that saves the cookie to your browser
-        </li>
-        <li>
-          These cookies can 'fingerprint' your identity through sophisticated means, sending data to trackers that can create an identity profile
-        </li>
-        <li>
-          Not using HTTPS on leaves your communications unprotected
-        </li>
-        <li>
-          Private browsing does not protect your information from your employer or ISP!
-        </li>
-      </ul>
-
-      <a href="https://github.com/FallibleInc/security-guide-for-developers/blob/master/security-checklist.md">Passwords in Software Development</a>
-
-
-      <h3>Fixes</h3>
-      <ul>
-        <li>
-          <a href="{{site.baseurl}}browser/alternatives">Browser Alternatives</a> that don't track you, block ads and increase speed and performance.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/blockers">Browser Extensions</a> that block ad tracking, reduce your digital fingerprint and increase online anonymity.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/https">HTTPS</a> encrypts your web surfing.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/private-browsing">Private Browsing</a> does not hide your web surfing from your employer or ISP.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/alternatives">TOR</a> browser will hide your traffic from your employer or ISP or any network.
-        </li>
-        <li>
-          <a href="{{site.baseurl}}browser/links">Read more about browsers and privacy</a>.
-        </li>
-      </ul>
-    </div>
+        <ul>
+          <li>
+            <span class="tool-icon"></span>
+            <a href="https://haveibeenpwned.com/">Check If Your Password Has Been Hacked</a>
+          </li>
+        </ul>
+      </article>
+    </section>
   </section>
   <footer class="page-footer">
     {% include nav-page.html prev="/passwords/choosing-passwords" next="/passwords/legal" %}

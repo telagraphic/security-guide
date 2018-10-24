@@ -52,59 +52,67 @@
     h3 + ul {
       padding: 0 0 2rem 0;
     }
-  }
 
-  ul {
-    padding: 2rem 0;
-    font-size: 1rem;
+    ul {
+      padding: 2rem 0;
+      font-size: 1rem;
 
-    @media (min-width: 42em) {
-      // padding: 2rem;
-      // font-size: .6rem;
-    }
-
-    li {
-      display: grid;
-      grid-template-columns: 1fr 11fr;
-      grid-template-rows: auto;
-      padding: .5rem 0;
-
-      span {
-        align-self: flex-start;
-
-        width: 1.5rem;
-        height: 1.5rem;
-
-        @media (min-width: 42em) {
-          align-self: center;
-        }
+      @media (min-width: 42em) {
+        // padding: 2rem;
+        // font-size: .6rem;
       }
 
-      a {
-        padding: 0 0 0 1rem;
+      li {
+        display: grid;
+        grid-template-columns: 1fr 11fr;
+        grid-template-rows: auto;
+        padding: .5rem 0;
 
-        text-decoration: none;
+        span {
+          align-self: flex-start;
 
-        transition-property: text-decoration;
-        transition-duration: .2s;
-        transition-timing-function: ease-in;
+          width: 1.5rem;
+          height: 1.5rem;
 
-        &:focus,
-        &:hover {
-          text-decoration: underline;
+          @media (min-width: 42em) {
+            align-self: center;
+          }
         }
 
-        @media (min-width: 42em) {
+        a {
+          padding: 0 0 0 1rem;
+
+          text-decoration: none;
+
+          transition-property: text-decoration;
+          transition-duration: .2s;
+          transition-timing-function: ease-in;
+
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @media (min-width: 42em) {
+            padding: 0 0 0 1rem;
+          }
+
+          .additional-links {
+            display: flex;
+            flex-flow: row nowrap;
+
+            a {
+              padding: 0 !important;
+            }
+          }
+        }
+
+        p {
           padding: 0 0 0 1rem;
         }
       }
-
-      p {
-        padding: 0 0 0 1rem;
-      }
     }
   }
-
 }
 
 .tool-highlight {

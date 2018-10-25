@@ -248,6 +248,13 @@
 
       a {
         padding: 0 1rem;
+
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -284,5 +291,70 @@
 
   footer {
     padding: 0 1rem;
+  }
+}
+
+.risk-list {
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "icon sub-header" "content content";
+    align-items: center;
+
+    padding: 1rem 0;
+
+
+    @media (min-width: 42em) {
+      grid-template-areas: "icon sub-header" " . content";
+    }
+
+
+    section {
+      grid-area: icon;
+      justify-self: center;
+      align-self: center;
+
+      display: flex;
+
+      padding: 0 .5rem;
+      height: 3rem;
+      width: 3rem;
+
+      border-radius: 50%;
+      background-color: #FB7272;;
+
+      @media (min-width: 42em) {
+        align-self: center;
+        padding: .5rem;
+      }
+
+      span {
+        height: 2rem;
+        width: 2rem;
+      }
+    }
+
+    h4 {
+      grid-area: sub-header;
+      padding: 0 .5rem;
+
+      font-size: 1.2rem;
+
+      @media (min-width: 42em) {
+        padding: 0 0 .5rem 0;
+      }
+    }
+
+    p {
+      grid-area: content;
+      padding: 1rem .5rem;
+      margin: 0;
+
+      @media (min-width: 42em) {
+        padding: 0;
+      }
+    }
   }
 }

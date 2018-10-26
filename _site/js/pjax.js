@@ -12,10 +12,21 @@ var request = {
 
 function linkInterceptor() {
   window.addEventListener('click', function (event) {
+
     // fetch new chapter
     if (event.target && event.target.matches('a.chapter-link')) {
       event.preventDefault();
       request.url = event.target.getAttribute('href');
+      request.type = 'page';
+      if (preventDoubleClick(request.url)) {
+        fetchPage(request);
+      }
+    }
+
+    if (event.target && event.target.matches('h4.chapter-link')) {
+      // event.preventDefault();
+      request.url = event.target.parentNode.getAttribute('href');
+      console.log(request.url);
       request.type = 'page';
       if (preventDoubleClick(request.url)) {
         fetchPage(request);

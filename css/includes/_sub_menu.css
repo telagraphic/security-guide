@@ -1,0 +1,45 @@
+.sub-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: .5rem;
+}
+
+@media (min-width: 42em) {
+  .sub-menu {
+    padding: 0;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+  }
+}
+
+.sub-menu a.prev-link,
+.sub-menu a.next-link {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  transform: scale(0.9);
+  transition: transform .2s ease-in;
+}
+
+.sub-menu a.prev-link:focus, .sub-menu a.prev-link:hover,
+.sub-menu a.next-link:focus,
+.sub-menu a.next-link:hover {
+  transform: scale(1);
+}
+
+.sub-menu section .menu-button {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: 42em) {
+  .sub-menu section .menu-button {
+    background-color: white;
+    color: black;
+  }
+}

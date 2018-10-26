@@ -13,8 +13,19 @@ function removeActive(links) {
   });
 }
 
-// Main Menu
+// setup secure links
+function updateLinks() {
+  var chapterContents = document.querySelector('.chapter-contents');
+  var chapterLinks = chapterContents.querySelectorAll('a');
+  chapterLinks.forEach(function (link) {
+    if (!link.classList.contains('section-link')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
+}
 
+// Main Menu
 var mainMenu = document.querySelector('.main-menu');
 var menuButton = document.querySelector('.menu-button');
 var closeMenuButton = document.querySelector('.close-menu-button');
@@ -74,3 +85,4 @@ function removeActivePreview() {
 }
 
 initMenuLinks();
+updateLinks();

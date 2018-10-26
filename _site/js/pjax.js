@@ -114,6 +114,7 @@ function loadPage(contents, url, browserButton) {
 
   // show new page
   setTimeout(function () {
+    updateLinks();
     scrollToTop(pageContainer);
     toggleContent(pageContainer, true);
   }, 500);
@@ -134,6 +135,7 @@ function loadSection(section, url, browserButton) {
 
   // show new page
   setTimeout(function () {
+    updateLinks();
     scrollToTop(pageContainer);
     toggleContent(chapterSection, true);
   }, 300);
@@ -169,6 +171,17 @@ function updateNavigation(section) {
     button.setAttribute('href', nextHref);
   });
 
+}
+
+function updateLinks() {
+  var chapterContents = document.querySelector('.chapter-contents');
+  var chapterLinks = chapterContents.querySelectorAll('a');
+  chapterLinks.forEach(function (link) {
+    if (!link.classList.contains('section-link')) {
+      link.setAttribute('target', '_blank');
+      link.setAttribute('rel', 'noopener noreferrer');
+    }
+  });
 }
 
 function toggleContent(container, animating) {

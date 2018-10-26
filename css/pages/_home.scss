@@ -1,18 +1,49 @@
 .chapter-toc {
   display: flex;
   flex-flow: column nowrap;
-  @include section-width(50%);
+  @include section-width(89%);
+
+  @media (min-width: 42em) {
+    @include section-width(69%);
+  }
 
   a {
-    text-decoration: none;
+    display: grid;
+    grid-template-columns: 1.5fr 7fr;
+    grid-template-rows: auto;
+    grid-template-areas: "icon header" "icon text";
+
     padding: 1rem 0;
+    text-decoration: none;
+  }
+
+  span {
+    grid-area: icon;
+    display: block;
+
+    align-self: flex-start;
+
+    width: 4rem;
+    height: 4rem;
+
+    @media (min-width: 42em) {
+      align-self: center;
+    }
   }
 
   h2 {
+    font-size: 1rem;
+    grid-area: header;
 
+    padding: 0 0 0 1rem;
+
+    line-height: 1.5rem;
   }
 
   p {
+    grid-area: text;
+    line-height: 1.5rem;
 
+    padding: 0 0 0 1rem;
   }
 }

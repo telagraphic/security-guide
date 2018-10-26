@@ -22,17 +22,28 @@ var closeMenuButton = document.querySelector('.close-menu-button');
 window.addEventListener('click', function (event) {
 
   if (event.target) {
+
+    console.log(event.currentTarget);
+
     if (event.target.matches('button.menu-button')) {
-      console.log(menuButton);
+      console.log('menu button open');
       mainMenu.classList.toggle('toggle-menu');
     }
 
     if (event.target.matches('button.close-menu-button')) {
-      console.log(closeMenuButton);
+      console.log('menu button closed');
       mainMenu.classList.remove('toggle-menu');
     }
 
+    if (event.target.matches('h4.chapter-link')) {
+      console.log('chapter link');
+      setTimeout(function () {
+        mainMenu.classList.remove('toggle-menu');
+      }, 500);
+    }
+
     if (event.target.matches('a.chapter-link')) {
+      console.log('chapter link');
       setTimeout(function () {
         mainMenu.classList.remove('toggle-menu');
       }, 500);

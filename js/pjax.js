@@ -12,7 +12,6 @@ var request = {
 
 function linkInterceptor() {
   window.addEventListener('click', function (event) {
-
     // fetch new chapter
     if (event.target && event.target.matches('a.chapter-link')) {
       event.preventDefault();
@@ -89,7 +88,6 @@ function fetchSection(request) {
   xhr.onerror = function () { return 'Errored out!'; };
 
   xhr.send();
-
 }
 
 // load html into our container
@@ -143,11 +141,11 @@ function preventDoubleClick(url) {
 
 function updateNavigation(section) {
 
-  var prevHref = section.querySelector('.prev a').getAttribute('href');
-  var nextHref = section.querySelector('.next a').getAttribute('href');
+  var prevHref = section.querySelector('.prev-link').getAttribute('href');
+  var nextHref = section.querySelector('.next-link').getAttribute('href');
 
-  var prevButtons = document.querySelectorAll('.prev a');
-  var nextButtons = document.querySelectorAll('.next a');
+  var prevButtons = document.querySelectorAll('.prev-link');
+  var nextButtons = document.querySelectorAll('.next-link');
 
   var prevText = prevHref.split('/');
   var nextText = nextHref.split('/');

@@ -13,6 +13,11 @@ var request = {
 function linkInterceptor() {
   window.addEventListener('click', function (event) {
 
+    // skip id links
+    if (event.target && event.target.matches('a.no-tab')) {
+      return;
+    }
+
     // fetch new chapter
     if (event.target && event.target.matches('a.chapter-link')) {
       event.preventDefault();
@@ -176,8 +181,13 @@ function updateNavigation(section) {
 function updateLinks() {
   var chapterContents = document.querySelector('.chapter-contents');
   var chapterLinks = chapterContents.querySelectorAll('a');
+
   chapterLinks.forEach(function (link) {
-    if (!link.classList.contains('section-link')) {
+    if (link.classList.contains('no-tab')) {
+      return;
+    }
+
+    if (!link.classList.contains('section-link') && !link.classList.contains('chapter-link')) {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
     }

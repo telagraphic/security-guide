@@ -56,6 +56,18 @@
         text-indent: 1rem;
       }
 
+      .strong-paragraph {
+        padding: 2.5rem;
+
+        font-weight: bold;
+        font-style: italic;
+        text-indent: 0;
+      }
+
+      .strong-paragraph + p {
+        text-indent: 0;
+      }
+
       h2,
       h3,
       h4 {

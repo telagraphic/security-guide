@@ -1,14 +1,14 @@
 var links = document.querySelectorAll('.main-nav a');
 
-links.forEach(function(link) {
-  link.addEventListener('click', function(event) {
+links.forEach(function (link) {
+  link.addEventListener('click', function (event) {
     removeActive(links);
     this.classList.add('active');
   });
 });
 
 function removeActive(links) {
-  links.forEach(function(link) {
+  links.forEach(function (link) {
     link.classList.remove('active');
   });
 }
@@ -17,7 +17,12 @@ function removeActive(links) {
 function updateLinks() {
   var chapterContents = document.querySelector('.chapter-contents');
   var chapterLinks = chapterContents.querySelectorAll('a');
-  chapterLinks.forEach(function(link) {
+
+  chapterLinks.forEach(function (link) {
+    if (link.classList.contains('no-tab')) {
+      return;
+    }
+
     if (!link.classList.contains('section-link') && !link.classList.contains('chapter-link')) {
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
@@ -30,7 +35,7 @@ var mainMenu = document.querySelector('.main-menu');
 var menuButton = document.querySelector('.menu-button');
 var closeMenuButton = document.querySelector('.close-menu-button');
 
-window.addEventListener('click', function(event) {
+window.addEventListener('click', function (event) {
 
   if (event.target) {
 

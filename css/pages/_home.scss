@@ -4,7 +4,7 @@
   @include section-width(89%);
 
   @media (min-width: 42em) {
-    @include section-width(69%);
+    @include section-width(50%);
   }
 
   a {
@@ -13,7 +13,7 @@
     grid-template-rows: auto;
     grid-template-areas: "icon header" "icon text";
 
-    padding: 1rem 0;
+    padding: 3rem 0;
     text-decoration: none;
   }
 
@@ -26,24 +26,24 @@
     width: 4rem;
     height: 4rem;
 
-    @media (min-width: 42em) {
-      align-self: center;
-    }
+    // @media (min-width: 42em) {
+    //   align-self: flex-start;
+    // }
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     grid-area: header;
 
     padding: 0 0 0 1rem;
 
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 
   p {
     grid-area: text;
     line-height: 1.5rem;
 
-    padding: 0 0 0 1rem;
+    padding: 1rem 0 0 1rem;
   }
 }

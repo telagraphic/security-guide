@@ -176,10 +176,25 @@
       ul {
         display: flex;
         flex-flow: column nowrap;
-        justify-items: flex-start;
+        // justify-items: flex-start;
+        align-items: flex-start;
 
-        li {
+        a {
+          margin-left: 2rem;
           padding: .2rem 0;
+          color: white;
+          text-decoration: none;
+
+          &:focus,
+          &:hover {
+            text-decoration: underline;
+            background-color: black;
+          }
+
+          &.active {
+            color: black;
+            background-color: white;
+          }
         }
       }
     }

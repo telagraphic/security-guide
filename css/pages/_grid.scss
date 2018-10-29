@@ -13,6 +13,12 @@ main {
   grid-template-areas: "nav" "content";
 }
 
+.home-page {
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: 100vw;
+}
+
 nav.main-menu {
   grid-area: nav;
 

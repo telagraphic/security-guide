@@ -72,7 +72,7 @@
 
   article {
     grid-area: info-section;
-    padding: 5rem 0;
+    padding: 3rem 0;
     @include section-width(89%);
 
     @media (min-width: 42em) {
@@ -84,8 +84,7 @@
     }
 
     h2 {
-      text-align: center;
-      padding: 0 0 2rem 0;
+      padding: 2rem 0 0rem 0;
     }
 
     p {

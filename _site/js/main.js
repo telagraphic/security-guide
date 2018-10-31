@@ -54,7 +54,7 @@ window.addEventListener('click', function (event) {
     // }
 
     if (event.target.matches('a.chapter-link')) {
-      setTimeout(function() {
+      setTimeout(function () {
         mainMenu.classList.remove('toggle-menu');
       }, 500);
     }
@@ -67,8 +67,8 @@ var menuLinks = mainMenu.querySelectorAll('.links a');
 var previewLinks = document.querySelectorAll('.link-preview section');
 
 function initMenuLinks() {
-  menuLinks.forEach(function(link) {
-    link.addEventListener('mouseover', function(event) {
+  menuLinks.forEach(function (link) {
+    link.addEventListener('mouseover', function (event) {
       showLinkPreview(link.classList[0]);
     });
   });
@@ -76,7 +76,7 @@ function initMenuLinks() {
 
 function showLinkPreview(link) {
   removeActivePreview();
-  previewLinks.forEach(function(preview) {
+  previewLinks.forEach(function (preview) {
     if (link === preview.classList[0]) {
       preview.classList.toggle('show-preview');
     }
@@ -84,7 +84,7 @@ function showLinkPreview(link) {
 }
 
 function removeActivePreview() {
-  previewLinks.forEach(function(preview) {
+  previewLinks.forEach(function (preview) {
     preview.classList.remove('show-preview');
   });
 }

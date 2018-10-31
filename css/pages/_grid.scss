@@ -8,7 +8,7 @@ body {
 
 main {
   display: grid;
-  grid-template-rows: auto 100vh;
+  grid-template-rows: auto;
   grid-template-columns: 100vw;
   grid-template-areas: "nav" "content";
 }
@@ -36,7 +36,6 @@ nav.main-menu {
 section.container {
   grid-area: content;
   height: 100%;
-  // overflow-y: scroll;
 }
 
 // guide grid

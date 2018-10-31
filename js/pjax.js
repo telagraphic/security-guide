@@ -20,6 +20,7 @@ function linkInterceptor() {
 
     // fetch new chapter
     if (event.target && event.target.matches('a.chapter-link')) {
+      console.log("link clicked");
       event.preventDefault();
       request.url = event.target.getAttribute('href');
       request.type = 'page';
@@ -29,7 +30,7 @@ function linkInterceptor() {
     }
 
     if (event.target && event.target.matches('h4.chapter-link')) {
-      // event.preventDefault();
+      event.preventDefault();
       request.url = event.target.parentNode.getAttribute('href');
       console.log(request.url);
       request.type = 'page';
@@ -40,6 +41,7 @@ function linkInterceptor() {
 
     // fetch new chapter section
     if (event.target && event.target.matches('a.section-link')) {
+      console.log("link clicked");
       event.preventDefault();
       request.url = event.target.getAttribute('href');
       request.type = 'section';

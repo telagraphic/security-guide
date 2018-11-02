@@ -55,7 +55,6 @@
 
   .tool-header {
     grid-area: header;
-    padding: 1.5rem 0;
     padding: 2.5rem 0 1.5rem 0;
 
     color: white;
@@ -183,7 +182,7 @@
 
   .border-top-tool {
     grid-area: border-top;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     display: grid;
     grid-template-rows: repeat(5, var(--block-size));
@@ -549,7 +548,7 @@
 
   .border-bottom-tool {
     grid-area: border-bottom;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
     display: grid;
     grid-template-rows: repeat(5, var(--block-size));

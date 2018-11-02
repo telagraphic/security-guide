@@ -10,14 +10,14 @@
 .banner {
   width: 100%;
   height: 100%;
-  background-image: url('../../assets/img/inverted-banner.png');
+  background-image: url('../../assets/img/home-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% -5rem;
-  background-color: black;
+  background-color: white;
 
-  @media (min-width: 900px) {
-    background-position: 40% 50%;
+  @media (min-width: 1000px) {
+    background-position: 50% 50%;
   }
 
   // @media (min-width: 2000px) {
@@ -29,7 +29,7 @@
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: " . . . " " . . . " " header header header ";
 
-  @media (min-width: 900px) {
+  @media (min-width: 1200px) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -48,32 +48,36 @@
   }
 
   p {
-    color: white;
+    color: black;
     font-size: calc(22px + (39 - 22) * ((100vw - 320px) / (2000 - 320)));
     line-height: calc(29px + (50 - 29) * ((100vw - 320px) / (2000 - 320)));
 
-    @media (min-width: 900px) {
-      color: black;
+    @media (min-width: 1200px) {
+      color: white;
     }
   }
 }
 
 
 .site-introduction {
-
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: repeat(2, max-content);
-  grid-template-areas: "border-top" "info-section";
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas: "border-top" "info-section" "border-bottom";
+
+  background-color: black;
+
   --block-size: 1rem;
   --white-box: rgba(255, 255, 255, 1);
   --black-box: rgba(0,0,0,1);
-  --gray-box: rgba(0,0,0,.1);
+  --gray-box: #dbdbdb;
 
   article {
     grid-area: info-section;
     padding: 3rem 0;
     @include section-width(89%);
+
+    color: white;
 
     @media (min-width: 42em) {
       @include section-width(50%);
@@ -85,6 +89,7 @@
 
     h2 {
       padding: 2rem 0 0rem 0;
+      color: white;
     }
 
     p {
@@ -106,7 +111,7 @@
     grid-template-columns: repeat(100, var(--block-size));
     grid-template-rows: 100%;
 
-    &:nth-child(5) {
+    &:nth-child(1) {
       .code-block {
         background-color: var(--white-box);
 
@@ -158,7 +163,7 @@
       }
     }
 
-    &:nth-child(4) {
+    &:nth-child(2) {
       .code-block {
         background-color: var(--white-box);
 
@@ -394,7 +399,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(4) {
       .code-block {
         background-color: var(--black-box);
 
@@ -434,7 +439,7 @@
       }
     }
 
-    &:nth-child(1) {
+    &:nth-child(5) {
       .code-block {
         background-color: var(--black-box);
 
@@ -466,7 +471,7 @@
     grid-template-columns: repeat(100, var(--block-size));
     grid-template-rows: 100%;
 
-    &:nth-child(5) {
+    &:nth-child(1) {
       .code-block {
         background-color: var(--black-box);
 
@@ -476,7 +481,7 @@
       }
     }
 
-    &:nth-child(4) {
+    &:nth-child(2) {
       .code-block {
         background-color: var(--black-box);
 
@@ -604,7 +609,7 @@
       }
     }
 
-    &:nth-child(2) {
+    &:nth-child(4) {
       .code-block {
         background-color: var(--white-box);
 
@@ -751,7 +756,7 @@
       }
     }
 
-    &:nth-child(1) {
+    &:nth-child(5) {
       .code-block {
         background-color: var(--white-box);
 

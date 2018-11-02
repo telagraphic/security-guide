@@ -20,13 +20,13 @@
     align-items: center;
 
     span {
-      width: 6rem;
-      height: 6rem;
+      width: 4rem;
+      height: 4rem;
       object-fit: contain;
 
-      &.width-fix {
-        width: 4rem;
-        height: 4rem;
+      @media (min-width: 42em) {
+        width: 6rem;
+        height: 6rem;
       }
     }
 

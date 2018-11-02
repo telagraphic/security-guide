@@ -8,8 +8,6 @@
 
   padding: 1rem 0;
 
-  word-break: break-all;
-
   @include section-width(89%);
 
   @media (min-width: 42em) {

@@ -7,8 +7,6 @@
 
   background-color: black;
 
-  // word-break: break-all;
-
   @include section-width(100%);
 
   @media (min-width: 42em) {

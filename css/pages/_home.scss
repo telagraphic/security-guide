@@ -7,6 +7,58 @@
   grid-template-rows: var(--vh100) max-content max-content;
 }
 
+// .banner {
+//   width: 100%;
+//   height: 100%;
+//   background-image: url('../../assets/img/home-banner.png');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: 70% -5rem;
+//   background-color: white;
+//
+//   @media (min-width: 1000px) {
+//     background-position: 50% 50%;
+//   }
+//
+//   // @media (min-width: 2000px) {
+//   //   background-position: 70% -5rem;
+//   // }
+//
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-template-rows: repeat(3, 1fr);
+//   grid-template-areas: " . . . " " . . . " " header header header ";
+//
+//   @media (min-width: 1200px) {
+//     display: grid;
+//     grid-template-columns: repeat(6, 1fr);
+//     grid-template-rows: repeat(6, 1fr);
+//     grid-template-areas: " . . . . . . " "header header header . . . " " . . . . . . " " . . . . . . " " . . . . . . " " . . . . . . ";
+//   }
+//
+//   .banner-header {
+//     grid-area: header;
+//     padding: 1rem 1.5rem;
+//     margin-top: 2rem;
+//
+//     @media (min-width: 800px) {
+//       padding: 3rem 3rem;
+//     }
+//
+//   }
+//
+//   p {
+//     color: black;
+//     font-size: calc(22px + (39 - 22) * ((100vw - 320px) / (2000 - 320)));
+//     line-height: calc(29px + (50 - 29) * ((100vw - 320px) / (2000 - 320)));
+//
+//     @media (min-width: 1200px) {
+//       color: white;
+//     }
+//   }
+// }
+
+
 .banner {
   width: 100%;
   height: 100%;
@@ -14,22 +66,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 70% -5rem;
-  background-color: white;
 
-  @media (min-width: 1000px) {
-    background-position: 50% 50%;
+  @media (min-width: 900px) {
+    background-position: 40% 50%;
   }
 
-  // @media (min-width: 2000px) {
-  //   background-position: 70% -5rem;
-  // }
+  @media (min-width: 2000px) {
+    background-position: 70% -5rem;
+  }
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: " . . . " " . . . " " header header header ";
 
-  @media (min-width: 1200px) {
+  @media (min-width: 900px) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
@@ -42,7 +93,7 @@
     margin-top: 2rem;
 
     @media (min-width: 800px) {
-      padding: 3rem 3rem;
+      padding: 3rem 2.5rem;
     }
 
   }
@@ -52,12 +103,11 @@
     font-size: calc(22px + (39 - 22) * ((100vw - 320px) / (2000 - 320)));
     line-height: calc(29px + (50 - 29) * ((100vw - 320px) / (2000 - 320)));
 
-    @media (min-width: 1200px) {
+    @media (min-width: 900px) {
       color: white;
     }
   }
 }
-
 
 .site-introduction {
   display: grid;

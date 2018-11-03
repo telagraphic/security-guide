@@ -127,6 +127,7 @@ function loadPage(contents, url, browserButton) {
 function loadSection(section, url, browserButton) {
   var chapterSection = document.querySelector('.chapter-contents');
   document.title = section.querySelector('title').innerHTML;
+  var body = document.querySelector('body');
 
   updateNavigation(section);
 
@@ -140,7 +141,9 @@ function loadSection(section, url, browserButton) {
   // show new page
   setTimeout(function () {
     updateLinks();
-    scrollToTop(pageContainer);
+    // scrollToTop(pageContainer);
+    scrollToTop(body);
+    console.log('scroll fired');
     toggleContent(chapterSection, true);
   }, 300);
 }

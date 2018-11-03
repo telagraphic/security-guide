@@ -1,7 +1,6 @@
 // browser fixes for certain elements
 
 :root {
-  font-family: 'Roboto', sans-serif;
   color: #333;
   font-size: calc( 21px + (28 - 21) * ( (100vw - 600px) / ( 1300 - 600) ));
   line-height: calc( 35px + (48 - 35) * ( (100vw - 600px) / ( 1300 - 600) ));

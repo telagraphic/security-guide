@@ -1,4 +1,53 @@
 
+// Space Grotesk
+// https://fonts.floriankarsten.com/space-grotesk
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  font-style:  normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../fonts/space-grotesk/SpaceGrotesk-Light.woff2") format("woff2"),
+       url("../../fonts/space-grotesk/SpaceGrotesk-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  font-style:  normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../fonts/space-grotesk/SpaceGrotesk-Regular.woff2") format("woff2"),
+       url("../../fonts/space-grotesk/SpaceGrotesk-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  font-style:  normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../fonts/space-grotesk/SpaceGrotesk-Medium.woff2") format("woff2"),
+       url("../../fonts/space-grotesk/SpaceGrotesk-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  font-style:  normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../fonts/space-grotesk/SpaceGrotesk-SemiBold.woff2") format("woff2"),
+       url("../../fonts/space-grotesk/SpaceGrotesk-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Space-Grotesk';
+  font-style:  normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../../fonts/space-grotesk/SpaceGrotesk-Bold.woff2") format("woff2"),
+       url("../../fonts/space-grotesk/SpaceGrotesk-Bold.woff") format("woff");
+}
+
+
 
 // Sometype-Mono
 // http://monospacedfont.com

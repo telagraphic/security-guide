@@ -926,3 +926,14 @@
     }
   }
 }
+
+.resources-list {
+  display: flex;
+  flex-flow: column nowrap;
+
+  h2 {
+    padding: 3rem 0 1rem 0;
+  }
+
+  
+}
